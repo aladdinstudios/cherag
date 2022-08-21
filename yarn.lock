@@ -415,10 +415,10 @@ chalk@^4.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-cherag-ui@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/cherag-ui/-/cherag-ui-0.1.0.tgz#5dc774c1030dfb48f50094a2fffe7a71af363b2f"
-  integrity sha512-AK2NUOu5jqhSIcHg6pIf0QeiOcWuRF1+sSwZuoxP2gJCdLl7Zrf4HjmkMOifeSPzsqzmfCj5XqNtgMhA76w+YQ==
+cherag-ui@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/cherag-ui/-/cherag-ui-0.1.1.tgz#04981df9a184777c106b997beb1b76732b80ddfc"
+  integrity sha512-HjhK3rJJTsqhOTav/uZoW0L/cSUaCr1lZFXnaZ52l0hMccBgPbVVPDRUJD4+8sNwylwcXBVTICROZ+yUx9jnAQ==
 
 cliui@^7.0.2:
   version "7.0.4"
