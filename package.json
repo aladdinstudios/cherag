@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export -o docs",
+    "postbuild": "echo '# THIS IS NEEDED FOR NEXT JS STATIC FILES TO BE SERVED ON GH PAGES' > docs/.nojekyll",
     "start": "next start",
     "lint": "next lint"
   },
