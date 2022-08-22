@@ -1,12 +1,8 @@
 import { Div, Text } from "cherag-ui";
-import { NextPage } from "next";
-import { useRouter } from "next/router";
 import Layout from "../../components/Layout";
-import type { ReactElement } from "react";
 import { NextPageWithLayout } from "../_app";
 
 const Ui: NextPageWithLayout = () => {
-  const router = useRouter();
   return (
     <Div style={{ width: "80%" }}>
       <Text>

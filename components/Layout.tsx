@@ -1,6 +1,6 @@
 import { Div } from "cherag-ui";
-import { FC, PropsWithChildren, ReactNode } from "react";
-import Wrapper from "./Sidebar/wrapper";
+import { PropsWithChildren } from "react";
+import Wrapper from "./Sidebar/Wrapper";
 
 const Layout = ({ children }: PropsWithChildren) => {
   return (
