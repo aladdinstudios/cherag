@@ -1,34 +1,48 @@
-import { Div, IconButton, SIZES, Text } from "cherag-ui";
+import { COLORS, Div, IconButton, Text } from "cherag-ui";
 import type { NextPage } from "next";
-import { useState } from "react";
-import { StyleSheet } from "react-native";
+import Link from "next/link";
 
 const Home: NextPage = () => {
-  const [alert, setAlert] = useState(false);
   return (
-    <Div>
-      <Text>Welcome to Cherag Docs!</Text>
+    <Div style={{ justifyContent: "center", flex: 1, alignItems: "center" }}>
+      <Text fontSize="4xl">Welcome to Cherag Docs!</Text>
       <IconButton
         color="red"
         onPress={(e) => console.log("test icon button")}
-        icon="timeline-alert"
+        icon="heart"
       />
+      <IconButton
+        color="red"
+        onPress={(e) => console.log("test icon button")}
+        icon="heart"
+      />
+      <IconButton
+        color="red"
+        onPress={(e) => console.log("test icon button")}
+        icon="heart"
+      />
+      <IconButton
+        color="red"
+        onPress={(e) => console.log("test icon button")}
+        icon="heart"
+      />
+      <IconButton
+        color="red"
+        onPress={(e) => console.log("test icon button")}
+        icon="heart"
+      />
+      <IconButton
+        color="red"
+        onPress={(e) => console.log("test icon button")}
+        icon="heart"
+      />
+      <Link href="https://aladdinstudios.github.io/cherag/ui">
+        <a style={{ color: COLORS.red, fontSize: 20 }}>
+          Click here for Cherag UI Documentation
+        </a>
+      </Link>
     </Div>
   );
 };
 
 export default Home;
-
-const styles = StyleSheet.create({
-  container: {
-    width: "100%",
-    height: SIZES.DimensionHeight * 2,
-    marginTop: 30,
-  },
-  radioBtnGroup: {
-    flexDirection: "row",
-  },
-  textAreaContainer: {
-    marginTop: 30,
-  },
-});
