@@ -17,7 +17,7 @@ const About: NextPageWithLayout = () => {
       <Text>about page</Text>
       <Text>about page</Text>
 
-      <SyntaxHighlighter language="dts" style={docco}>
+      <SyntaxHighlighter language="tsx" style={docco}>
         {codeString}
       </SyntaxHighlighter>
     </Div>
