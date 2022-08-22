@@ -29,5 +29,6 @@ module.exports = {
     "react-native-vector-icons",
     // Additional Modules
     "cherag-ui",
+    "react-syntax-highlighter",
   ],
 };
