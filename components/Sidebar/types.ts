@@ -1,3 +1,7 @@
+import { ReactNode } from "react";
+import { GestureResponderEvent } from "react-native";
+
 export type Props = {
-  children: string;
+  children: ReactNode;
+  onPress?: (event: GestureResponderEvent) => void;
 };
