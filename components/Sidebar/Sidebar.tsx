@@ -1,20 +1,16 @@
 import { Button, COLORS, Div } from "cherag-ui";
 import { type } from "os";
 import React, { FC } from "react";
+import { Props } from "./types";
 
-export type Props = {
-  children: string;
-};
-
-const Sidebar: FC<Props> = ({ children }) => {
+const Sidebar: FC<Props> = ({ children, onPress }) => {
   return (
     <Button
+      width={150}
       bg={COLORS.white}
       fontSize={18}
       color={COLORS.black}
-      onPress={() => {
-        console.log("Custom button pressed");
-      }}
+      onPress={onPress}
     >
       {children}
     </Button>
