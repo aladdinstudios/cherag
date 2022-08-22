@@ -64,7 +64,7 @@ const About: NextPageWithLayout = () => {
             flexDirection: "row",
           }}
         >
-          <Text style={{ width: 100 }}>Status</Text>
+          <Text style={{ width: 100 }}>status</Text>
           <Text style={{ width: 100 }}>String</Text>
           <Text>Type of component, Component colors.</Text>
         </Div>
@@ -76,7 +76,7 @@ const About: NextPageWithLayout = () => {
           }}
         />
         <Div style={{ flexDirection: "row" }}>
-          <Text style={{ width: 100 }}>Title</Text>
+          <Text style={{ width: 100 }}>title</Text>
           <Text style={{ width: 100 }}>String</Text>
           <Text>Title of the Alert component.</Text>
         </Div>
