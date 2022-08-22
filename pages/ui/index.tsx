@@ -24,6 +24,6 @@ const Ui: NextPageWithLayout = () => {
   );
 };
 
-Ui.getLayout = (page: ReactElement) => <Layout>{page}</Layout>;
+Ui.getLayout = (page) => <Layout>{page}</Layout>;
 
 export default Ui;
