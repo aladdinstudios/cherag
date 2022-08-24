@@ -13,7 +13,7 @@ const Wrapper = () => {
         <Sidebar onPress={() => router.push("/ui/Avatar")}>Avatar</Sidebar>
         <Sidebar onPress={() => router.push("/ui/Button")}>Button</Sidebar>
         <Sidebar onPress={() => router.push("/ui/Card")}>Card</Sidebar>
-        <Sidebar>Checkbox</Sidebar>
+        <Sidebar onPress={() => router.push("/ui/Checkbox")}>Checkbox</Sidebar>
         <Sidebar>Card</Sidebar>
         <Sidebar>Div</Sidebar>
         <Sidebar>Divider</Sidebar>

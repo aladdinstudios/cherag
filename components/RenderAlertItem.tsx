@@ -32,7 +32,7 @@ export const RenderAlertItem: FC<RenderAlertItemProps> = ({
       </Text>
 
       <SyntaxHighlighter
-        customStyle={{ height: 110 }}
+        customStyle={{ height: 200 }}
         language="tsx"
         style={docco}
       >
