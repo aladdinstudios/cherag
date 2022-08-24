@@ -2,14 +2,14 @@ import { COLORS, Div, Divider, Text } from "cherag-ui";
 import { FC, ReactNode } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { useCaseArayObjProps } from "../pages/ui/Avatar";
+import { UsecaseArayObjProps } from "../pages/ui/Avatar";
 import { ProjectColor } from "../theme";
 import { ProperticsProps } from "../types/Propertics";
 
 export type RenderAlertItemProps = {
   componentName: string;
   importCodeString: string;
-  useCaseCodeStringArr: useCaseArayObjProps[];
+  usecaseCodeStringArr: UsecaseArayObjProps[];
   children: ReactNode;
   propertics: ProperticsProps[];
 };
@@ -17,7 +17,7 @@ export type RenderAlertItemProps = {
 export const RenderAlertItem: FC<RenderAlertItemProps> = ({
   componentName,
   importCodeString,
-  useCaseCodeStringArr,
+  usecaseCodeStringArr,
   children,
   propertics,
 }) => {
@@ -37,7 +37,7 @@ export const RenderAlertItem: FC<RenderAlertItemProps> = ({
       <Text style={{ fontSize: 30, fontWeight: "bold", marginTop: 25 }}>
         Usage
       </Text>
-      {useCaseCodeStringArr.map((item) => {
+      {usecaseCodeStringArr.map((item) => {
         return (
           <Div key={item.name}>
             <Text style={{ fontSize: 24, marginVertical: 20 }}>

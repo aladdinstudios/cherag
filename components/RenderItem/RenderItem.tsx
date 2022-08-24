@@ -1,17 +1,9 @@
 import { COLORS, Div, Divider, Text } from "cherag-ui";
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { ProjectColor } from "../../theme";
-import { ProperticsProps } from "../../types/Propertics";
-
-export type RenderItemProps = {
-  componentName: string;
-  importCodeString: string;
-  useCaseCodeString: string;
-  children: ReactNode;
-  propertics: ProperticsProps[];
-};
+import { RenderItemProps } from "./types";
 
 export const RenderItem: FC<RenderItemProps> = ({
   componentName,

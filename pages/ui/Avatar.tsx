@@ -6,7 +6,7 @@ import RenderAlertItem from "../../components/RenderAlertItem";
 import { ProperticsProps } from "../../types/Propertics";
 import { NextPageWithLayout } from "../_app";
 
-export interface useCaseArayObjProps {
+export interface UsecaseArayObjProps {
   name: string;
   code: string;
 }
@@ -41,7 +41,7 @@ const AvatarComponent: NextPageWithLayout = () => {
 
   let __importCodeString = `import {Avatar} from 'cherag-ui'`;
 
-  let __useCaseCodeStringArr: useCaseArayObjProps[] = [
+  let __useCaseCodeStringArr: UsecaseArayObjProps[] = [
     {
       name: "Avatar.Image",
       code: `
@@ -79,7 +79,7 @@ const AvatarComponent: NextPageWithLayout = () => {
       <RenderAlertItem
         componentName={"Avatar"}
         importCodeString={__importCodeString}
-        useCaseCodeStringArr={__useCaseCodeStringArr}
+        usecaseCodeStringArr={__useCaseCodeStringArr}
         propertics={__propertics}
       >
         <Div
