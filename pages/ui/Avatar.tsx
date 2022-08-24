@@ -13,14 +13,29 @@ export interface useCaseArayObjProps {
 const AvatarComponent: NextPageWithLayout = () => {
   let __propertics: ProperticsProps[] = [
     {
-      name: "name",
-      type: "string",
-      des: "Type of component, Component colors.Type of component.",
+      name: "dotSize",
+      type: "number",
+      des: "For providing props to resize active dot inside Avatar Image.",
     },
     {
-      name: "title",
+      name: "dotColor",
       type: "string",
-      des: "Title of the Alert component",
+      des: "For providing props to chage active dot color inside Avatar Image.",
+    },
+    {
+      name: "size",
+      type: "number",
+      des: "Size of Avatar.",
+    },
+    {
+      name: "style",
+      type: "StyleProp<ViewStyle>",
+      des: "Cherag-ui has default style, could change custom style.",
+    },
+    {
+      name: "imageStyle",
+      type: "StyleProp<ViewStyle>",
+      des: "For providing props to styling Image component inside Avatar.",
     },
   ];
 
@@ -80,19 +95,19 @@ const AvatarComponent: NextPageWithLayout = () => {
               uri: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
             }}
           />
-          <Avatar.Text
-            style={{ paddingTop: 20 }}
-            bgColor={COLORS.border}
-            textColor={COLORS.white}
-            size={60}
-            label="XD"
-          />
           <Avatar.Icon
             style={{ paddingTop: 10 }}
             iconColor={COLORS.red}
             bgColor={COLORS.lightGray}
             iconSize={35}
             icon="heart"
+          />
+          <Avatar.Text
+            style={{ paddingTop: 20 }}
+            bgColor={COLORS.border}
+            textColor={COLORS.white}
+            size={60}
+            label="XD"
           />
         </Div>
       </RenderAlertItem>
