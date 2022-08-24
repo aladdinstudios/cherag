@@ -1,5 +1,4 @@
-import { Avatar, Button, COLORS, Div } from "cherag-ui";
-import { url } from "inspector";
+import { Button, COLORS, Div } from "cherag-ui";
 import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
 import RenderAlertItem from "../../components/RenderAlertItem";
@@ -15,7 +14,7 @@ const ButtonComponent: NextPageWithLayout = () => {
   let __propertics: ProperticsProps[] = [
     {
       name: "children",
-      type: "",
+      type: "React.ReactNode",
       des: "Name of the button.",
     },
     {

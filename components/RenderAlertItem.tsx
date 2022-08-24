@@ -31,7 +31,11 @@ export const RenderAlertItem: FC<RenderAlertItemProps> = ({
         state.
       </Text>
 
-      <SyntaxHighlighter language="tsx" style={docco}>
+      <SyntaxHighlighter
+        customStyle={{ height: 110 }}
+        language="tsx"
+        style={docco}
+      >
         {importCodeString}
       </SyntaxHighlighter>
       <Text style={{ fontSize: 30, fontWeight: "bold", marginTop: 25 }}>
@@ -55,7 +59,7 @@ export const RenderAlertItem: FC<RenderAlertItemProps> = ({
           marginTop: 30,
           backgroundColor: COLORS.lightGray5,
           width: "100%",
-          height: 200,
+          height: "30%",
           alignItems: "center",
           justifyContent: "center",
         }}
@@ -67,8 +71,8 @@ export const RenderAlertItem: FC<RenderAlertItemProps> = ({
         Props
       </Text>
       <Div style={{ flexDirection: "row" }}>
-        <Text style={{ fontWeight: "bold", width: 100 }}>Name</Text>
-        <Text style={{ fontWeight: "bold", width: 100 }}>Type</Text>
+        <Text style={{ fontWeight: "bold", width: 200 }}>Name</Text>
+        <Text style={{ fontWeight: "bold", width: 200 }}>Type</Text>
         <Text style={{ fontWeight: "bold" }}>Description</Text>
       </Div>
       <Divider
@@ -82,8 +86,8 @@ export const RenderAlertItem: FC<RenderAlertItemProps> = ({
         return (
           <Div key={item.name}>
             <Div key={item.name} style={{ flexDirection: "row" }}>
-              <Text style={{ width: 100 }}>{item.name}</Text>
-              <Text style={{ width: 100 }}>{item.type}</Text>
+              <Text style={{ width: 200 }}>{item.name}</Text>
+              <Text style={{ width: 200 }}>{item.type}</Text>
               <Text style={{ width: 500 }}>{item.des}</Text>
             </Div>
             <Divider
