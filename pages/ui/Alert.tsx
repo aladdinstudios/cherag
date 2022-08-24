@@ -1,14 +1,9 @@
 import { Alert, Text } from "cherag-ui";
 import { ScrollView } from "react-native";
-import Layout from "../components/Layout";
-import { RenderItem } from "../components/RenderItem";
-import { NextPageWithLayout } from "./_app";
-
-export interface ProperticsProps {
-  name: string;
-  type: string;
-  des: string;
-}
+import { RenderItem } from "../../components/RenderItem";
+import Layout from "../../components/Layout";
+import { NextPageWithLayout } from "../_app";
+import { ProperticsProps } from "../../types/Propertics";
 
 const About: NextPageWithLayout = () => {
   let object: ProperticsProps[] = [

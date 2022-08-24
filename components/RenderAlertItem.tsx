@@ -1,14 +1,23 @@
 import { COLORS, Div, Divider, Text } from "cherag-ui";
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { ProjectColor } from "../../theme";
-import { RenderItemProps } from "./types";
+import { UsecaseArayObjProps } from "../pages/ui/Avatar";
+import { ProjectColor } from "../theme";
+import { ProperticsProps } from "../types/Propertics";
 
-export const RenderItem: FC<RenderItemProps> = ({
+export type RenderAlertItemProps = {
+  componentName: string;
+  importCodeString: string;
+  usecaseCodeStringArr: UsecaseArayObjProps[];
+  children: ReactNode;
+  propertics: ProperticsProps[];
+};
+
+export const RenderAlertItem: FC<RenderAlertItemProps> = ({
   componentName,
   importCodeString,
-  useCaseCodeString,
+  usecaseCodeStringArr,
   children,
   propertics,
 }) => {
@@ -25,12 +34,22 @@ export const RenderItem: FC<RenderItemProps> = ({
       <SyntaxHighlighter language="tsx" style={docco}>
         {importCodeString}
       </SyntaxHighlighter>
-      <Text style={{ fontSize: 30, fontWeight: "bold", marginVertical: 20 }}>
+      <Text style={{ fontSize: 30, fontWeight: "bold", marginTop: 25 }}>
         Usage
       </Text>
-      <SyntaxHighlighter language="tsx" style={docco}>
-        {useCaseCodeString}
-      </SyntaxHighlighter>
+      {usecaseCodeStringArr.map((item) => {
+        return (
+          <Div key={item.name}>
+            <Text style={{ fontSize: 24, marginVertical: 20 }}>
+              {item.name}
+            </Text>
+            <SyntaxHighlighter language="tsx" style={docco}>
+              {item.code}
+            </SyntaxHighlighter>
+          </Div>
+        );
+      })}
+
       <Div
         style={{
           marginTop: 30,
@@ -61,7 +80,7 @@ export const RenderItem: FC<RenderItemProps> = ({
       />
       {propertics.map((item) => {
         return (
-          <>
+          <Div key={item.name}>
             <Div key={item.name} style={{ flexDirection: "row" }}>
               <Text style={{ width: 100 }}>{item.name}</Text>
               <Text style={{ width: 100 }}>{item.type}</Text>
@@ -74,11 +93,11 @@ export const RenderItem: FC<RenderItemProps> = ({
                 marginVertical: 10,
               }}
             />
-          </>
+          </Div>
         );
       })}
     </Div>
   );
 };
 
-export default RenderItem;
+export default RenderAlertItem;
