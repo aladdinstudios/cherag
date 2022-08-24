@@ -49,7 +49,7 @@ const CardComponent: NextPageWithLayout = () => {
     },
     {
       name: "children",
-      type: "React.ReactNode",
+      type: "React.ReactNode | string",
       des: "Paragraph of card.",
     },
     {
