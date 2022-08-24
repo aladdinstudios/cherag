@@ -9,13 +9,9 @@ const Wrapper = () => {
   return (
     <Div style={{ width: "20%", padding: 20 }}>
       <ScrollView>
-        <Link href="ui/pages/about.js">
-          <Sidebar onPress={() => router.push("/ui/Alert")}>Alert</Sidebar>
-        </Link>
-        <Link href="ui/pages/about.js">
-          <Sidebar onPress={() => router.push("/ui/Avatar")}>Avatar</Sidebar>
-        </Link>
-        <Sidebar>Button</Sidebar>
+        <Sidebar onPress={() => router.push("/ui/Alert")}>Alert</Sidebar>
+        <Sidebar onPress={() => router.push("/ui/Avatar")}>Avatar</Sidebar>
+        <Sidebar onPress={() => router.push("/ui/Button")}>Button</Sidebar>
         <Sidebar>Card</Sidebar>
         <Sidebar>Checkbox</Sidebar>
         <Sidebar>Card</Sidebar>
