@@ -5,25 +5,25 @@ import Layout from "../../components/Layout";
 import { NextPageWithLayout } from "../_app";
 import { ProperticsProps } from "../../types/Propertics";
 
-const About: NextPageWithLayout = () => {
+const AlertComponent: NextPageWithLayout = () => {
   let object: ProperticsProps[] = [
-    {
-      name: "name",
-      type: "string",
-      des: "Type of component, Component colors.Type of component.Type of component, Component colors.Type of component.Type of component, Component colors.Type of component.Type of component, Component colors.Type of component.",
-    },
     {
       name: "title",
       type: "string",
-      des: "Title of the Alert component",
+      des: "Title of the alert.",
+    },
+    {
+      name: "status",
+      type: "string",
+      des: "The status of the alert",
     },
   ];
   return (
     <ScrollView showsHorizontalScrollIndicator={false}>
       <RenderItem
-        componentName={"Alart"}
+        componentName={"Alert"}
         importCodeString={`import {Alert} from 'cherag-ui'`}
-        useCaseCodeString={`<Alert status="warning" title="Item deleted !!!" />`}
+        useCaseCodeString={`<Alert status="warning" title="Product add successfully" />`}
         propertics={object}
       >
         <Alert status="success" title="Product add Successfully" />
@@ -32,6 +32,6 @@ const About: NextPageWithLayout = () => {
   );
 };
 
-About.getLayout = (page) => <Layout>{page}</Layout>;
+AlertComponent.getLayout = (page) => <Layout>{page}</Layout>;
 
-export default About;
+export default AlertComponent;
