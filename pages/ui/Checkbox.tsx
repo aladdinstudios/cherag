@@ -11,25 +11,10 @@ import { NextPageWithLayout } from "../_app";
 
 const CheckboxComponent: NextPageWithLayout = () => {
   const [checkboxes, setCheckboxes] = useState<CheckboxValue[]>([]);
+
+  let __componentName = "Checkbox";
   let __componentDescription =
     "Checkboxes allow the selection of multiple options from various childred.";
-  let __propertics: ProperticsProps[] = [
-    {
-      name: "values",
-      type: "string[]",
-      des: "Selected items of checkbox.",
-    },
-    {
-      name: "children",
-      type: "React.ReactNode",
-      des: "Child elements of checkbox.",
-    },
-    {
-      name: "onChange",
-      type: "(values: any) => any",
-      des: "The callback return when any children Checkbox is checked or unchecked..",
-    },
-  ];
   let __importCodeString = `import { Checkbox, CheckboxItem, CheckboxValue } from 'cherag-ui'`;
   let __useCaseCodeStringArr: UsecaseArayObjProps[] = [
     {
@@ -47,10 +32,27 @@ const CheckboxComponent: NextPageWithLayout = () => {
     };`,
     },
   ];
+  let __propertics: ProperticsProps[] = [
+    {
+      name: "values",
+      type: "string[]",
+      des: "Selected items of checkbox.",
+    },
+    {
+      name: "children",
+      type: "React.ReactNode",
+      des: "Child elements of checkbox.",
+    },
+    {
+      name: "onChange",
+      type: "(values: any) => any",
+      des: "The callback return when any children Checkbox is checked or unchecked..",
+    },
+  ];
   return (
     <ScrollView showsHorizontalScrollIndicator={false}>
       <RenderItem
-        componentName={"Checkbox"}
+        componentName={__componentName}
         componentDescription={__componentDescription}
         importCodeString={__importCodeString}
         usecaseCodeStringArr={__useCaseCodeStringArr}

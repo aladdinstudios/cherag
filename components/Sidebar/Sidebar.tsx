@@ -1,6 +1,6 @@
 import { Button, COLORS } from "cherag-ui";
 import Link from "next/link";
-import React, { FC } from "react";
+import { FC } from "react";
 import { Props } from "./types";
 
 const Sidebar: FC<Props> = ({ children }) => {

@@ -13,9 +13,7 @@ const Wrapper = () => {
         <Sidebar>Checkbox</Sidebar>
         <Sidebar>Div</Sidebar>
         <Sidebar>Divider</Sidebar>
-        <Sidebar>Card</Sidebar>
         <Sidebar>Dropdown</Sidebar>
-        <Sidebar>Divider</Sidebar>
         <Sidebar>IconButton</Sidebar>
         <Sidebar>Image</Sidebar>
         <Sidebar>Input</Sidebar>
