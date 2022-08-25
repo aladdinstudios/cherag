@@ -11,6 +11,9 @@ export interface UsecaseArayObjProps {
 }
 
 const CardComponent: NextPageWithLayout = () => {
+  let __componentName = "Card";
+  let __componentDescription =
+    "Card component is a structure of material that provide as an entry point to more detailed information.";
   let __propertics: ProperticsProps[] = [
     {
       name: "title",
@@ -104,7 +107,8 @@ const CardComponent: NextPageWithLayout = () => {
   return (
     <ScrollView showsHorizontalScrollIndicator={false}>
       <RenderAlertItem
-        componentName={"Card"}
+        componentName={__componentName}
+        componentDescription={__componentDescription}
         importCodeString={__importCodeString}
         usecaseCodeStringArr={__useCaseCodeStringArr}
         propertics={__propertics}

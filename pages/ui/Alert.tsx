@@ -1,12 +1,22 @@
-import { Alert, Text } from "cherag-ui";
+import { Alert } from "cherag-ui";
 import { ScrollView } from "react-native";
-import { RenderItem } from "../../components/RenderItem";
 import Layout from "../../components/Layout";
-import { NextPageWithLayout } from "../_app";
+import RenderAlertItem from "../../components/RenderAlertItem";
 import { ProperticsProps } from "../../types/Propertics";
+import { NextPageWithLayout } from "../_app";
 
 const AlertComponent: NextPageWithLayout = () => {
-  let object: ProperticsProps[] = [
+  let __componentName = "Alert";
+  let __componentDescription =
+    "Component for displaying messages, notifications, or other application state.";
+  let __importCodeString = `import { Alert } from 'cherag-ui'`;
+  let __useCaseCodeStringArr = [
+    {
+      name: "",
+      code: `<Alert status="success" title="Product add Successfully" />`,
+    },
+  ];
+  let __propertics: ProperticsProps[] = [
     {
       name: "title",
       type: "string",
@@ -20,14 +30,15 @@ const AlertComponent: NextPageWithLayout = () => {
   ];
   return (
     <ScrollView showsHorizontalScrollIndicator={false}>
-      <RenderItem
-        componentName={"Alert"}
-        importCodeString={`import {Alert} from 'cherag-ui'`}
-        useCaseCodeString={`<Alert status="warning" title="Product add successfully" />`}
-        propertics={object}
+      <RenderAlertItem
+        componentName={__componentName}
+        componentDescription={__componentDescription}
+        importCodeString={__importCodeString}
+        usecaseCodeStringArr={__useCaseCodeStringArr}
+        propertics={__propertics}
       >
         <Alert status="success" title="Product add Successfully" />
-      </RenderItem>
+      </RenderAlertItem>
     </ScrollView>
   );
 };
