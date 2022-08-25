@@ -1,5 +1,4 @@
 import { Div } from "cherag-ui";
-import Link from "next/link";
 import { ScrollView } from "react-native";
 import Sidebar from "./Sidebar";
 
