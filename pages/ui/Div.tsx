@@ -1,5 +1,4 @@
-import { Checkbox, CheckboxItem, CheckboxValue } from "cherag-ui";
-import { useState } from "react";
+import { COLORS, Div, Text } from "cherag-ui";
 import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
 import { RenderItem } from "../../components/RenderItem";
@@ -9,27 +8,35 @@ import {
 } from "../../components/RenderItem/types";
 import { NextPageWithLayout } from "../_app";
 
-const CheckboxComponent: NextPageWithLayout = () => {
-  const [checkboxes, setCheckboxes] = useState<CheckboxValue[]>([]);
-
-  let __componentName = "Checkbox";
+const DivComponent: NextPageWithLayout = () => {
+  let __componentName = "Div";
   let __componentDescription =
     "Checkboxes allow the selection of multiple options from various childred.";
-  let __importCodeString = `import { Checkbox, CheckboxItem, CheckboxValue } from 'cherag-ui'`;
+  let __importCodeString = `import { COLORS, Div, Text } from "cherag-ui"'`;
   let __useCaseCodeStringArr: UsecaseArayObjProps[] = [
     {
       name: "",
       code: `
-    render{
-        const [checkboxes, setCheckboxes] = useState<CheckboxValue[]>([]);
-      return(
-        <Checkbox values={checkboxes} onChange={setCheckboxes}>
-            <CheckboxItem value="1">Checkbox 1</CheckboxItem>
-            <CheckboxItem value="2">Checkbox 2</CheckboxItem>
-            <CheckboxItem value="3">Checkbox 3</CheckboxItem>
-        </Checkbox>
-        );
-    };`,
+    <Div
+      bg={COLORS.errorIcon}
+      w={200}
+      h={100}
+      p={10}
+      m={10}
+      style={{
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Text
+        fontSize="xl"
+        style={{
+          color: COLORS.white,
+        }}
+      >
+        Div Commponent
+      </Text>
+    </Div>`,
     },
   ];
   let __propertics: ProperticsProps[] = [
@@ -58,16 +65,31 @@ const CheckboxComponent: NextPageWithLayout = () => {
         usecaseCodeStringArr={__useCaseCodeStringArr}
         propertics={__propertics}
       >
-        <Checkbox values={checkboxes} onChange={setCheckboxes}>
-          <CheckboxItem value="1">Checkbox 1</CheckboxItem>
-          <CheckboxItem value="2">Checkbox 2</CheckboxItem>
-          <CheckboxItem value="3">Checkbox 3</CheckboxItem>
-        </Checkbox>
+        <Div
+          bg={COLORS.errorIcon}
+          w={200}
+          h={100}
+          p={10}
+          m={10}
+          style={{
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Text
+            fontSize="xl"
+            style={{
+              color: COLORS.white,
+            }}
+          >
+            Div Commponent
+          </Text>
+        </Div>
       </RenderItem>
     </ScrollView>
   );
 };
 
-CheckboxComponent.getLayout = (page) => <Layout>{page}</Layout>;
+DivComponent.getLayout = (page) => <Layout>{page}</Layout>;
 
-export default CheckboxComponent;
+export default DivComponent;
