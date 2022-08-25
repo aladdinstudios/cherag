@@ -36,7 +36,7 @@ const Home: NextPage = () => {
         onPress={(e) => console.log("test icon button")}
         icon="heart"
       />
-      <Link href="https://aladdinstudios.github.io/cherag/ui">
+      <Link href="/ui">
         <a style={{ color: COLORS.red, fontSize: 20 }}>
           Click here for Cherag UI Documentation
         </a>
