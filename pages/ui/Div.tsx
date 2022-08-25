@@ -11,7 +11,7 @@ import { NextPageWithLayout } from "../_app";
 const DivComponent: NextPageWithLayout = () => {
   let __componentName = "Div";
   let __componentDescription =
-    "Checkboxes allow the selection of multiple options from various childred.";
+    "Use the Div component as a layout primitive to add margin, padding, and colors to content.";
   let __importCodeString = `import { COLORS, Div, Text } from "cherag-ui"'`;
   let __useCaseCodeStringArr: UsecaseArayObjProps[] = [
     {
@@ -41,19 +41,39 @@ const DivComponent: NextPageWithLayout = () => {
   ];
   let __propertics: ProperticsProps[] = [
     {
-      name: "values",
-      type: "string[]",
-      des: "Selected items of checkbox.",
-    },
-    {
       name: "children",
       type: "React.ReactNode",
-      des: "Child elements of checkbox.",
+      des: "Child elements of Div.",
     },
     {
-      name: "onChange",
-      type: "(values: any) => any",
-      des: "The callback return when any children Checkbox is checked or unchecked..",
+      name: "style",
+      type: "StyleProp<ViewStyle>",
+      des: "Style of Div.",
+    },
+    {
+      name: "bg",
+      type: "string",
+      des: "Background color of Div.",
+    },
+    {
+      name: "w",
+      type: "number",
+      des: "Width of Div.",
+    },
+    {
+      name: "h",
+      type: "number",
+      des: "Height of Div.",
+    },
+    {
+      name: "p",
+      type: "number",
+      des: "Padding of Div.",
+    },
+    {
+      name: "m",
+      type: "number",
+      des: "Margin of Div.",
     },
   ];
   return (
