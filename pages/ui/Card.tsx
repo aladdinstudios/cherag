@@ -71,9 +71,7 @@ const CardComponent: NextPageWithLayout = () => {
       des: "Paragraph style of card.",
     },
   ];
-
   let __importCodeString = `import { Card } from 'cherag-ui'`;
-
   let __useCaseCodeStringArr: UsecaseArayObjProps[] = [
     {
       name: "",

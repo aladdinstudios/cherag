@@ -5,12 +5,16 @@ import RenderAlertItem from "../../components/RenderAlertItem";
 import { ProperticsProps } from "../../types/Propertics";
 import { NextPageWithLayout } from "../_app";
 
+export interface UsecaseArayObjProps {
+  name: string;
+  code: string;
+}
 const AlertComponent: NextPageWithLayout = () => {
   let __componentName = "Alert";
   let __componentDescription =
     "Component for displaying messages, notifications, or other application state.";
   let __importCodeString = `import { Alert } from 'cherag-ui'`;
-  let __useCaseCodeStringArr = [
+  let __useCaseCodeStringArr: UsecaseArayObjProps[] = [
     {
       name: "",
       code: `<Alert status="success" title="Product add Successfully" />`,
