@@ -1,8 +1,11 @@
 import { Card, COLORS } from "cherag-ui";
 import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
-import RenderAlertItem from "../../components/RenderAlertItem";
-import { ProperticsProps, UsecaseArayObjProps } from "../../types/Propertics";
+import { RenderItem } from "../../components/RenderItem";
+import {
+  UsecaseArayObjProps,
+  ProperticsProps,
+} from "../../components/RenderItem/types";
 import { NextPageWithLayout } from "../_app";
 
 const CardComponent: NextPageWithLayout = () => {
@@ -99,7 +102,7 @@ const CardComponent: NextPageWithLayout = () => {
 
   return (
     <ScrollView showsHorizontalScrollIndicator={false}>
-      <RenderAlertItem
+      <RenderItem
         componentName={__componentName}
         componentDescription={__componentDescription}
         importCodeString={__importCodeString}
@@ -129,7 +132,7 @@ const CardComponent: NextPageWithLayout = () => {
           also called Bangalore is the center of BD high-tech industry. The city
           is also known for its parks and nightlife
         </Card>
-      </RenderAlertItem>
+      </RenderItem>
     </ScrollView>
   );
 };

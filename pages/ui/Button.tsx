@@ -1,8 +1,11 @@
 import { Button, COLORS, Div } from "cherag-ui";
 import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
-import RenderAlertItem from "../../components/RenderAlertItem";
-import { ProperticsProps, UsecaseArayObjProps } from "../../types/Propertics";
+import { RenderItem } from "../../components/RenderItem";
+import {
+  UsecaseArayObjProps,
+  ProperticsProps,
+} from "../../components/RenderItem/types";
 import { NextPageWithLayout } from "../_app";
 
 const ButtonComponent: NextPageWithLayout = () => {
@@ -93,7 +96,7 @@ const ButtonComponent: NextPageWithLayout = () => {
 
   return (
     <ScrollView showsHorizontalScrollIndicator={false}>
-      <RenderAlertItem
+      <RenderItem
         componentName={__componentName}
         componentDescription={__componentDescription}
         importCodeString={__importCodeString}
@@ -117,7 +120,7 @@ const ButtonComponent: NextPageWithLayout = () => {
         >
           Button
         </Button>
-      </RenderAlertItem>
+      </RenderItem>
     </ScrollView>
   );
 };

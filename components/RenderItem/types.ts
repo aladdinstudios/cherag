@@ -1,10 +1,9 @@
-import { ReactNode } from "react";
-import { ProperticsProps } from "../../types/Propertics";
-
-export type RenderItemProps = {
-  componentName: string;
-  importCodeString: string;
-  useCaseCodeString: string;
-  children: ReactNode;
-  propertics: ProperticsProps[];
-};
+export interface ProperticsProps {
+  name: string;
+  type: string;
+  des: string;
+}
+export interface UsecaseArayObjProps {
+  name: string;
+  code: string;
+}
