@@ -1,9 +1,11 @@
 import { Avatar, COLORS, Div } from "cherag-ui";
-import { url } from "inspector";
 import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
-import RenderAlertItem from "../../components/RenderAlertItem";
-import { ProperticsProps, UsecaseArayObjProps } from "../../types/Propertics";
+import { RenderItem } from "../../components/RenderItem";
+import {
+  UsecaseArayObjProps,
+  ProperticsProps,
+} from "../../components/RenderItem/types";
 import { NextPageWithLayout } from "../_app";
 
 const AvatarComponent: NextPageWithLayout = () => {
@@ -76,7 +78,7 @@ const AvatarComponent: NextPageWithLayout = () => {
   ];
   return (
     <ScrollView showsHorizontalScrollIndicator={false}>
-      <RenderAlertItem
+      <RenderItem
         componentName={__componentName}
         componentDescription={__componentDescription}
         importCodeString={__importCodeString}
@@ -111,7 +113,7 @@ const AvatarComponent: NextPageWithLayout = () => {
             label="XD"
           />
         </Div>
-      </RenderAlertItem>
+      </RenderItem>
     </ScrollView>
   );
 };

@@ -2,14 +2,12 @@ import { Checkbox, CheckboxItem, CheckboxValue } from "cherag-ui";
 import { useState } from "react";
 import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
-import RenderAlertItem from "../../components/RenderAlertItem";
-import { ProperticsProps } from "../../types/Propertics";
+import { RenderItem } from "../../components/RenderItem";
+import {
+  ProperticsProps,
+  UsecaseArayObjProps,
+} from "../../components/RenderItem/types";
 import { NextPageWithLayout } from "../_app";
-
-export interface UsecaseArayObjProps {
-  name: string;
-  code: string;
-}
 
 const CheckboxComponent: NextPageWithLayout = () => {
   const [checkboxes, setCheckboxes] = useState<CheckboxValue[]>([]);
@@ -32,7 +30,6 @@ const CheckboxComponent: NextPageWithLayout = () => {
       des: "The callback return when any children Checkbox is checked or unchecked..",
     },
   ];
-
   let __importCodeString = `import { Checkbox, CheckboxItem, CheckboxValue } from 'cherag-ui'`;
   let __useCaseCodeStringArr: UsecaseArayObjProps[] = [
     {
@@ -50,10 +47,9 @@ const CheckboxComponent: NextPageWithLayout = () => {
     };`,
     },
   ];
-
   return (
     <ScrollView showsHorizontalScrollIndicator={false}>
-      <RenderAlertItem
+      <RenderItem
         componentName={"Checkbox"}
         componentDescription={__componentDescription}
         importCodeString={__importCodeString}
@@ -65,7 +61,7 @@ const CheckboxComponent: NextPageWithLayout = () => {
           <CheckboxItem value="2">Checkbox 2</CheckboxItem>
           <CheckboxItem value="3">Checkbox 3</CheckboxItem>
         </Checkbox>
-      </RenderAlertItem>
+      </RenderItem>
     </ScrollView>
   );
 };

@@ -1,8 +1,11 @@
 import { Alert } from "cherag-ui";
 import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
-import RenderAlertItem from "../../components/RenderAlertItem";
-import { ProperticsProps, UsecaseArayObjProps } from "../../types/Propertics";
+import { RenderItem } from "../../components/RenderItem";
+import {
+  UsecaseArayObjProps,
+  ProperticsProps,
+} from "../../components/RenderItem/types";
 import { NextPageWithLayout } from "../_app";
 
 const AlertComponent: NextPageWithLayout = () => {
@@ -30,7 +33,7 @@ const AlertComponent: NextPageWithLayout = () => {
   ];
   return (
     <ScrollView showsHorizontalScrollIndicator={false}>
-      <RenderAlertItem
+      <RenderItem
         componentName={__componentName}
         componentDescription={__componentDescription}
         importCodeString={__importCodeString}
@@ -38,7 +41,7 @@ const AlertComponent: NextPageWithLayout = () => {
         propertics={__propertics}
       >
         <Alert status="success" title="Product add Successfully" />
-      </RenderAlertItem>
+      </RenderItem>
     </ScrollView>
   );
 };
