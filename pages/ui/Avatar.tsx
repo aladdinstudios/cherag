@@ -3,14 +3,50 @@ import { url } from "inspector";
 import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
 import RenderAlertItem from "../../components/RenderAlertItem";
-import { ProperticsProps } from "../../types/Propertics";
+import { ProperticsProps, UsecaseArayObjProps } from "../../types/Propertics";
 import { NextPageWithLayout } from "../_app";
 
-export interface UsecaseArayObjProps {
-  name: string;
-  code: string;
-}
 const AvatarComponent: NextPageWithLayout = () => {
+  let __componentName = "Avatar";
+  let __componentDescription =
+    "The Avatar component can display profile pictures, text, icon to represent a user.";
+  let __importCodeString = `import { Avatar } from 'cherag-ui'`;
+  let __useCaseCodeStringArr: UsecaseArayObjProps[] = [
+    {
+      name: "Avatar.Image",
+      code: `
+    <Avatar.Image
+      size={60}
+      dotSize={20}
+      dotColor={COLORS.green}
+      source={{
+        uri: "https://avatars.githubusercontent.com/u/1342004?s=64&v=4",
+      }}
+    />`,
+    },
+    {
+      name: "Avatar.Icon",
+      code: `
+    <Avatar.Icon
+      style={{ paddingTop: 10 }}
+      iconColor={COLORS.red}
+      bgColor={COLORS.lightGray}
+      iconSize={35}
+      icon="heart"
+    />`,
+    },
+    {
+      name: "Avatar.Text",
+      code: `
+    <Avatar.Text
+      style={{ paddingTop: 20 }}
+      bgColor={COLORS.border}
+      textColor={COLORS.white}
+      size={60}
+      label="XD"
+    />`,
+    },
+  ];
   let __propertics: ProperticsProps[] = [
     {
       name: "dotSize",
@@ -38,46 +74,11 @@ const AvatarComponent: NextPageWithLayout = () => {
       des: "For providing props to styling Image component inside Avatar.",
     },
   ];
-
-  let __importCodeString = `import {Avatar} from 'cherag-ui'`;
-
-  let __useCaseCodeStringArr: UsecaseArayObjProps[] = [
-    {
-      name: "Avatar.Image",
-      code: `
-  <Avatar.Image
-    size={60}
-    dotSize={20}
-    dotColor={COLORS.green}
-    source={require('./assets/alauddin.jpg')}
-  />`,
-    },
-    {
-      name: "Avatar.Icon",
-      code: `
-  <Avatar.Icon
-    iconColor={COLORS.blue}
-    bgColor={COLORS.lightGray}
-    iconSize={35}
-    icon="file"
-  />`,
-    },
-    {
-      name: "Avatar.Text",
-      code: `
-  <Avatar.Text
-    bgColor={COLORS.orange}
-    textColor={COLORS.white}
-    size={60}
-    label="XD"
-  />`,
-    },
-  ];
-
   return (
     <ScrollView showsHorizontalScrollIndicator={false}>
       <RenderAlertItem
-        componentName={"Avatar"}
+        componentName={__componentName}
+        componentDescription={__componentDescription}
         importCodeString={__importCodeString}
         usecaseCodeStringArr={__useCaseCodeStringArr}
         propertics={__propertics}

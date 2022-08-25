@@ -2,15 +2,43 @@ import { Card, COLORS } from "cherag-ui";
 import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
 import RenderAlertItem from "../../components/RenderAlertItem";
-import { ProperticsProps } from "../../types/Propertics";
+import { ProperticsProps, UsecaseArayObjProps } from "../../types/Propertics";
 import { NextPageWithLayout } from "../_app";
 
-export interface UsecaseArayObjProps {
-  name: string;
-  code: string;
-}
-
 const CardComponent: NextPageWithLayout = () => {
+  let __componentName = "Card";
+  let __componentDescription =
+    "Card component is a structure of material that provide as an entry point to more detailed information.";
+  let __importCodeString = `import { Card } from 'cherag-ui'`;
+  let __useCaseCodeStringArr: UsecaseArayObjProps[] = [
+    {
+      name: "",
+      code: `
+    <Card
+      w={250}
+      style={{
+        width: 250,
+        height: 380,
+      }}
+      title="The Garden City"
+      subTitle="The Silicon Valley of BD"
+      category="Photo"
+      footerText="6 mins ago"
+      footerStyle={{
+        width: 80,
+        fontSize: 14,
+      }}
+      paragraphStyle={{ fontSize: 14, color: COLORS.blackish }}
+      subTitleStyle={{ fontSize: 12 }}
+      titleStyle={{ fontSize: 22, color: COLORS.blackish }}
+    >
+      Bengaluru also called Bangalore is the center of BD high-tech
+      industry. The city is also known for its parks and nightlife Bengaluru
+      also called Bangalore is the center of BD high-tech industry. The city
+      is also known for its parks and nightlife
+   </Card>`,
+    },
+  ];
   let __propertics: ProperticsProps[] = [
     {
       name: "title",
@@ -69,42 +97,11 @@ const CardComponent: NextPageWithLayout = () => {
     },
   ];
 
-  let __importCodeString = `import { Card } from 'cherag-ui'`;
-
-  let __useCaseCodeStringArr: UsecaseArayObjProps[] = [
-    {
-      name: "",
-      code: `
-    <Card
-      w={250}
-      style={{
-        width: 250,
-        height: 380,
-      }}
-      title="The Garden City"
-      subTitle="The Silicon Valley of BD"
-      category="Photo"
-      footerText="6 mins ago"
-      footerStyle={{
-        width: 80,
-        fontSize: 14,
-      }}
-      paragraphStyle={{ fontSize: 14, color: COLORS.blackish }}
-      subTitleStyle={{ fontSize: 12 }}
-      titleStyle={{ fontSize: 22, color: COLORS.blackish }}
-    >
-      Bengaluru also called Bangalore is the center of BD high-tech
-      industry. The city is also known for its parks and nightlife Bengaluru
-      also called Bangalore is the center of BD high-tech industry. The city
-      is also known for its parks and nightlife
-   </Card>`,
-    },
-  ];
-
   return (
     <ScrollView showsHorizontalScrollIndicator={false}>
       <RenderAlertItem
-        componentName={"Card"}
+        componentName={__componentName}
+        componentDescription={__componentDescription}
         importCodeString={__importCodeString}
         usecaseCodeStringArr={__useCaseCodeStringArr}
         propertics={__propertics}

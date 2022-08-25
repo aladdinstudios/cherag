@@ -1,4 +1,4 @@
-import { COLORS, Div, Divider, Text } from "cherag-ui";
+import { COLORS, Div, Divider, SIZES, Text } from "cherag-ui";
 import { FC, ReactNode } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
@@ -8,6 +8,7 @@ import { ProperticsProps } from "../types/Propertics";
 
 export type RenderAlertItemProps = {
   componentName: string;
+  componentDescription: string;
   importCodeString: string;
   usecaseCodeStringArr: UsecaseArayObjProps[];
   children: ReactNode;
@@ -16,6 +17,7 @@ export type RenderAlertItemProps = {
 
 export const RenderAlertItem: FC<RenderAlertItemProps> = ({
   componentName,
+  componentDescription,
   importCodeString,
   usecaseCodeStringArr,
   children,
@@ -23,22 +25,23 @@ export const RenderAlertItem: FC<RenderAlertItemProps> = ({
 }) => {
   return (
     <Div style={{ marginTop: 80, marginLeft: 80, height: "auto" }}>
-      <Text style={{ fontSize: 30, fontWeight: "bold", marginBottom: 20 }}>
+      <Text style={{ fontSize: 30, fontWeight: "bold", paddingBottom: 30 }}>
         {componentName}
       </Text>
-      <Text style={{ marginBottom: 25 }}>
-        Component for displaying messages, notifications, or other application
-        state.
-      </Text>
+      <Text style={{ paddingBottom: 25 }}>{componentDescription}</Text>
 
-      <SyntaxHighlighter
-        customStyle={{ height: 110 }}
-        language="tsx"
-        style={docco}
+      <Div style={{}}>
+        <SyntaxHighlighter language="tsx" style={docco}>
+          {importCodeString}
+        </SyntaxHighlighter>
+      </Div>
+      <Text
+        style={{
+          fontSize: 30,
+          fontWeight: "bold",
+          marginTop: 25,
+        }}
       >
-        {importCodeString}
-      </SyntaxHighlighter>
-      <Text style={{ fontSize: 30, fontWeight: "bold", marginTop: 25 }}>
         Usage
       </Text>
       {usecaseCodeStringArr.map((item) => {

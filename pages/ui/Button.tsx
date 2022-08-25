@@ -2,15 +2,37 @@ import { Button, COLORS, Div } from "cherag-ui";
 import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
 import RenderAlertItem from "../../components/RenderAlertItem";
-import { ProperticsProps } from "../../types/Propertics";
+import { ProperticsProps, UsecaseArayObjProps } from "../../types/Propertics";
 import { NextPageWithLayout } from "../_app";
 
-export interface UsecaseArayObjProps {
-  name: string;
-  code: string;
-}
-
 const ButtonComponent: NextPageWithLayout = () => {
+  let __componentName = "Button";
+  let __componentDescription =
+    "The Button component triggers an event or an action. Examples can be submitting forms and deleting, update, add a data point.";
+  let __importCodeString = `import { Button } from 'cherag-ui'`;
+  let __useCaseCodeStringArr: UsecaseArayObjProps[] = [
+    {
+      name: "",
+      code: `
+    <Button
+      bg={COLORS.lightGray7}
+      color={COLORS.errorIcon}
+      width={300}
+      height={50}
+      borderWidth={1}
+      borderRadius={10}
+      style={{
+        justifyContent: "center",
+        borderColor: COLORS.lightPrimary,
+      }}
+      onPress={() => {
+        console.log("Button component pressed");
+      }}
+    >
+      Button
+    </Button>`,
+    },
+  ];
   let __propertics: ProperticsProps[] = [
     {
       name: "children",
@@ -19,7 +41,7 @@ const ButtonComponent: NextPageWithLayout = () => {
     },
     {
       name: "onPress",
-      type: "Function()",
+      type: "(values:any)=> any",
       des: "Providing button onPress Action.",
     },
     {
@@ -69,54 +91,32 @@ const ButtonComponent: NextPageWithLayout = () => {
     },
   ];
 
-  let __importCodeString = `import {Button} from 'cherag-ui'`;
-
-  let __useCaseCodeStringArr: UsecaseArayObjProps[] = [
-    {
-      name: "Button",
-      code: `
-   <Button
-      bg={COLORS.softGray}
-      color={COLORS.black}
-      onPress={() => {
-      console.log('Custom button pressed');
-    }}>
-     Button
-   </Button>`,
-    },
-  ];
-
   return (
     <ScrollView showsHorizontalScrollIndicator={false}>
       <RenderAlertItem
-        componentName={"Button"}
+        componentName={__componentName}
+        componentDescription={__componentDescription}
         importCodeString={__importCodeString}
         usecaseCodeStringArr={__useCaseCodeStringArr}
         propertics={__propertics}
       >
-        <Div
+        <Button
+          bg={COLORS.lightGray7}
+          color={COLORS.errorIcon}
+          width={300}
+          height={50}
+          borderWidth={1}
+          borderRadius={10}
           style={{
-            flexDirection: "row",
+            justifyContent: "center",
+            borderColor: COLORS.lightPrimary,
+          }}
+          onPress={() => {
+            console.log("Button component pressed");
           }}
         >
-          <Button
-            bg={COLORS.lightGray7}
-            color={COLORS.errorIcon}
-            width={300}
-            height={50}
-            borderWidth={1}
-            borderRadius={10}
-            style={{
-              justifyContent: "center",
-              borderColor: COLORS.lightPrimary,
-            }}
-            onPress={() => {
-              console.log("Button component pressed");
-            }}
-          >
-            Button
-          </Button>
-        </Div>
+          Button
+        </Button>
       </RenderAlertItem>
     </ScrollView>
   );
