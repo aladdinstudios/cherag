@@ -3,7 +3,7 @@ export interface ProperticsProps {
   type: string;
   des: string;
 }
-export interface UsecaseArayObjProps {
+export interface UsecaseArrayObjProps {
   name: string;
   code: string;
 }

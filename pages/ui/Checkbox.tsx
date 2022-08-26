@@ -5,7 +5,7 @@ import Layout from "../../components/Layout";
 import { RenderItem } from "../../components/RenderItem";
 import {
   ProperticsProps,
-  UsecaseArayObjProps,
+  UsecaseArrayObjProps,
 } from "../../components/RenderItem/types";
 import { NextPageWithLayout } from "../_app";
 
@@ -16,7 +16,7 @@ const CheckboxComponent: NextPageWithLayout = () => {
   let __componentDescription =
     "Checkboxes allow the selection of multiple options from various childred.";
   let __importCodeString = `import { Checkbox, CheckboxItem, CheckboxValue } from 'cherag-ui'`;
-  let __useCaseCodeStringArr: UsecaseArayObjProps[] = [
+  let __useCaseCodeStringArr: UsecaseArrayObjProps[] = [
     {
       name: "",
       code: `

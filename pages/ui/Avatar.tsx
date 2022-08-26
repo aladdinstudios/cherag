@@ -3,7 +3,7 @@ import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
 import { RenderItem } from "../../components/RenderItem";
 import {
-  UsecaseArayObjProps,
+  UsecaseArrayObjProps,
   ProperticsProps,
 } from "../../components/RenderItem/types";
 import { NextPageWithLayout } from "../_app";
@@ -13,7 +13,7 @@ const AvatarComponent: NextPageWithLayout = () => {
   let __componentDescription =
     "The Avatar component can display profile pictures, text, icon to represent a user.";
   let __importCodeString = `import { Avatar } from 'cherag-ui'`;
-  let __useCaseCodeStringArr: UsecaseArayObjProps[] = [
+  let __useCaseCodeStringArr: UsecaseArrayObjProps[] = [
     {
       name: "Avatar.Image",
       code: `
