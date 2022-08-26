@@ -4,7 +4,7 @@ import Layout from "../../components/Layout";
 import { RenderItem } from "../../components/RenderItem";
 import {
   ProperticsProps,
-  UsecaseArayObjProps,
+  UsecaseArrayObjProps,
 } from "../../components/RenderItem/types";
 import { NextPageWithLayout } from "../_app";
 
@@ -13,7 +13,7 @@ const DividerComponent: NextPageWithLayout = () => {
   let __componentDescription =
     "Divider can visually separate content in a given text, list or group.";
   let __importCodeString = `import { Divider } from "cherag-ui"'`;
-  let __useCaseCodeStringArr: UsecaseArayObjProps[] = [
+  let __useCaseCodeStringArr: UsecaseArrayObjProps[] = [
     {
       name: "",
       code: `

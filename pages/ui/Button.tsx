@@ -3,7 +3,7 @@ import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
 import { RenderItem } from "../../components/RenderItem";
 import {
-  UsecaseArayObjProps,
+  UsecaseArrayObjProps,
   ProperticsProps,
 } from "../../components/RenderItem/types";
 import { NextPageWithLayout } from "../_app";
@@ -13,7 +13,7 @@ const ButtonComponent: NextPageWithLayout = () => {
   let __componentDescription =
     "The Button component triggers an event or an action. Examples can be submitting forms and deleting, update, add a data point.";
   let __importCodeString = `import { Button } from 'cherag-ui'`;
-  let __useCaseCodeStringArr: UsecaseArayObjProps[] = [
+  let __useCaseCodeStringArr: UsecaseArrayObjProps[] = [
     {
       name: "",
       code: `

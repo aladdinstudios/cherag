@@ -3,7 +3,7 @@ import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
 import { RenderItem } from "../../components/RenderItem";
 import {
-  UsecaseArayObjProps,
+  UsecaseArrayObjProps,
   ProperticsProps,
 } from "../../components/RenderItem/types";
 import { NextPageWithLayout } from "../_app";
@@ -13,7 +13,7 @@ const CardComponent: NextPageWithLayout = () => {
   let __componentDescription =
     "Card component is a structure of material that provide as an entry point to more detailed information.";
   let __importCodeString = `import { Card } from 'cherag-ui'`;
-  let __useCaseCodeStringArr: UsecaseArayObjProps[] = [
+  let __useCaseCodeStringArr: UsecaseArrayObjProps[] = [
     {
       name: "",
       code: `

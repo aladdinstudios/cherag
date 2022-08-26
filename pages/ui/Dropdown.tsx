@@ -1,42 +1,34 @@
-import { COLORS, Div, Text } from "cherag-ui";
+import { Dropdown, DropdownItem } from "cherag-ui";
+import { useState } from "react";
 import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
 import { RenderItem } from "../../components/RenderItem";
 import {
   ProperticsProps,
-  UsecaseArayObjProps,
+  UsecaseArrayObjProps,
 } from "../../components/RenderItem/types";
 import { NextPageWithLayout } from "../_app";
 
 const DropdownComponent: NextPageWithLayout = () => {
-  let __componentName = "Div";
+  const [selectItem, setSelectItem] = useState<string>();
+  let __componentName = "Dropdown";
   let __componentDescription =
     "Use the Div component as a layout primitive to add margin, padding, and colors to content.";
-  let __importCodeString = `import { COLORS, Div, Text } from "cherag-ui"'`;
-  let __useCaseCodeStringArr: UsecaseArayObjProps[] = [
+  let __importCodeString = `import { Dropdown, DropdownItem } from "cherag-ui"'`;
+  let __useCaseCodeStringArr: UsecaseArrayObjProps[] = [
     {
       name: "",
       code: `
-    <Div
-      bg={COLORS.errorIcon}
-      w={200}
-      h={100}
-      p={10}
-      m={10}
-      style={{
-        justifyContent: "center",
-        alignItems: "center",
-      }}
+    <Dropdown
+      onChange={setSelectItem}
+      selected={selectItem}
+      header="Choose Service"
+      width={80}
     >
-      <Text
-        fontSize="xl"
-        style={{
-          color: COLORS.white,
-        }}
-      >
-        Div Commponent
-      </Text>
-    </Div>`,
+      <DropdownItem value="one">Product one</DropdownItem>
+      <DropdownItem value="two">Product two</DropdownItem>
+      <DropdownItem value="three">Product three</DropdownItem>
+    </Dropdown>`,
     },
   ];
   let __propertics: ProperticsProps[] = [
@@ -85,26 +77,16 @@ const DropdownComponent: NextPageWithLayout = () => {
         usecaseCodeStringArr={__useCaseCodeStringArr}
         propertics={__propertics}
       >
-        <Div
-          bg={COLORS.errorIcon}
-          w={200}
-          h={100}
-          p={10}
-          m={10}
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-          }}
+        <Dropdown
+          onChange={setSelectItem}
+          selected={selectItem}
+          header="Choose Service"
+          width={80}
         >
-          <Text
-            fontSize="xl"
-            style={{
-              color: COLORS.white,
-            }}
-          >
-            Div Commponent
-          </Text>
-        </Div>
+          <DropdownItem value="one">Product one</DropdownItem>
+          <DropdownItem value="two">Product two</DropdownItem>
+          <DropdownItem value="three">Product three</DropdownItem>
+        </Dropdown>
       </RenderItem>
     </ScrollView>
   );

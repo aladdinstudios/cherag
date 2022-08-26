@@ -3,7 +3,7 @@ import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
 import { RenderItem } from "../../components/RenderItem";
 import {
-  UsecaseArayObjProps,
+  UsecaseArrayObjProps,
   ProperticsProps,
 } from "../../components/RenderItem/types";
 import { NextPageWithLayout } from "../_app";
@@ -13,7 +13,7 @@ const AlertComponent: NextPageWithLayout = () => {
   let __componentDescription =
     "Component for displaying messages, notifications, or other application state.";
   let __importCodeString = `import { Alert } from 'cherag-ui'`;
-  let __useCaseCodeStringArr: UsecaseArayObjProps[] = [
+  let __useCaseCodeStringArr: UsecaseArrayObjProps[] = [
     {
       name: "",
       code: `<Alert status="success" title="Product add Successfully" />`,

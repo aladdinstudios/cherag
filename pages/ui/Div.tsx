@@ -4,7 +4,7 @@ import Layout from "../../components/Layout";
 import { RenderItem } from "../../components/RenderItem";
 import {
   ProperticsProps,
-  UsecaseArayObjProps,
+  UsecaseArrayObjProps,
 } from "../../components/RenderItem/types";
 import { NextPageWithLayout } from "../_app";
 
@@ -13,7 +13,7 @@ const DivComponent: NextPageWithLayout = () => {
   let __componentDescription =
     "Use the Div component as a layout primitive to add margin, padding, and colors to content.";
   let __importCodeString = `import { COLORS, Div, Text } from "cherag-ui"'`;
-  let __useCaseCodeStringArr: UsecaseArayObjProps[] = [
+  let __useCaseCodeStringArr: UsecaseArrayObjProps[] = [
     {
       name: "",
       code: `
