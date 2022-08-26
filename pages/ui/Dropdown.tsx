@@ -13,7 +13,7 @@ const DropdownComponent: NextPageWithLayout = () => {
   const [selectItem, setSelectItem] = useState<string>();
   let __componentName = "Dropdown";
   let __componentDescription =
-    "Use the Div component as a layout primitive to add margin, padding, and colors to content.";
+    "Use the Dropdown component to select an item to dropdown list.";
   let __importCodeString = `import { Dropdown, DropdownItem } from "cherag-ui"'`;
   let __useCaseCodeStringArr: UsecaseArrayObjProps[] = [
     {
@@ -35,37 +35,27 @@ const DropdownComponent: NextPageWithLayout = () => {
     {
       name: "children",
       type: "React.ReactNode",
-      des: "Child elements of Div.",
+      des: "Child elements of Dropdown.",
     },
     {
-      name: "style",
-      type: "StyleProp<ViewStyle>",
-      des: "Style of Div.",
+      name: "onChange",
+      type: "(values: any) => any",
+      des: "Change Dropdown item to save value to state elements of Dropdown.",
     },
     {
-      name: "bg",
+      name: "selected",
       type: "string",
-      des: "Background color of Div.",
+      des: "selected is string state.",
     },
     {
-      name: "w",
+      name: "width",
       type: "number",
-      des: "Width of Div.",
+      des: "Width of Dropdown container.",
     },
     {
-      name: "h",
+      name: "fontSize",
       type: "number",
-      des: "Height of Div.",
-    },
-    {
-      name: "p",
-      type: "number",
-      des: "Padding of Div.",
-    },
-    {
-      name: "m",
-      type: "number",
-      des: "Margin of Div.",
+      des: "Text of font size of Dropdown.",
     },
   ];
   return (
@@ -81,7 +71,7 @@ const DropdownComponent: NextPageWithLayout = () => {
           onChange={setSelectItem}
           selected={selectItem}
           header="Choose Service"
-          width={80}
+          width={180}
         >
           <DropdownItem value="one">Product one</DropdownItem>
           <DropdownItem value="two">Product two</DropdownItem>
