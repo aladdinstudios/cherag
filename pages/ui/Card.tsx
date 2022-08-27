@@ -3,8 +3,8 @@ import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
 import { RenderItem } from "../../components/RenderItem";
 import {
-  UsecaseArrayObjProps,
   ProperticsProps,
+  UsecaseArrayObjProps,
 } from "../../components/RenderItem/types";
 import { NextPageWithLayout } from "../_app";
 
