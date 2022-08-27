@@ -71,7 +71,7 @@ const IconButtonComponent: NextPageWithLayout = () => {
         <IconButton
           icon="rocket"
           onPress={() => {
-            console.log("Icon button pressed");
+            console.log("Test IconButton component");
           }}
           size={68}
           color={COLORS.red}
