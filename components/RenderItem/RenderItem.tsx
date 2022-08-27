@@ -29,7 +29,7 @@ export const RenderItem: FC<RenderItemProps> = ({
       </Text>
       <Text style={{ paddingBottom: 25 }}>{componentDescription}</Text>
 
-      <Div style={{}}>
+      <Div>
         <SyntaxHighlighter language="tsx" style={docco}>
           {importCodeString}
         </SyntaxHighlighter>
