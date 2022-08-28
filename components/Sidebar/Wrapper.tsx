@@ -1,10 +1,25 @@
-import { Div } from "cherag-ui";
+import { COLORS, Div, Text } from "cherag-ui";
 import { ScrollView } from "react-native";
 import Sidebar from "./Sidebar";
 
 const Wrapper = () => {
   return (
-    <Div style={{ width: "20%", padding: 20 }}>
+    <Div
+      style={{
+        width: "10%",
+        margin: 50,
+        alignItems: "center",
+      }}
+    >
+      <Text
+        fontSize="3xl"
+        style={{
+          color: COLORS.errorIcon,
+          marginBottom: 20,
+        }}
+      >
+        Components
+      </Text>
       <ScrollView>
         <Sidebar>Alert</Sidebar>
         <Sidebar>Avatar</Sidebar>
@@ -21,11 +36,6 @@ const Wrapper = () => {
         <Sidebar>Spinner</Sidebar>
         <Sidebar>Switch</Sidebar>
         <Sidebar>Text</Sidebar>
-        <Sidebar>TextArea</Sidebar>
-        <Sidebar>TextArea</Sidebar>
-        <Sidebar>TextArea</Sidebar>
-        <Sidebar>TextArea</Sidebar>
-        <Sidebar>TextArea</Sidebar>
         <Sidebar>TextArea</Sidebar>
       </ScrollView>
     </Div>

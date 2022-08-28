@@ -1,4 +1,4 @@
-import { Div } from "cherag-ui";
+import { Div, Text } from "cherag-ui";
 import { PropsWithChildren } from "react";
 import Wrapper from "./Sidebar/Wrapper";
 
