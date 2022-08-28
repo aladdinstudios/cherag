@@ -1,4 +1,4 @@
-import { COLORS, Div, Switch, Text } from "cherag-ui";
+import { Switch } from "cherag-ui";
 import { useState } from "react";
 import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
