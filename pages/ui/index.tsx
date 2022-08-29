@@ -99,7 +99,7 @@ const Ui: NextPageWithLayout = () => {
           understand of React Native ui library, allowing you to develop apps
           for Android, iOS and the Web.
         </Text>
-        <Text style={{ fontWeight: "600" }} fontSize="2xl">
+        <Text style={{ fontWeight: "600", marginTop: 25 }} fontSize="2xl">
           Cherag UI: The Design easy and developer friendly.
         </Text>
         <Text style={{ textAlign: "justify", marginVertical: 15 }}>
@@ -108,7 +108,7 @@ const Ui: NextPageWithLayout = () => {
           systems, web applications, and more with a simple API for world class
           developer.
         </Text>
-        <Div style={{ flexDirection: "row", marginVertical: 15 }}>
+        <Div style={{ flexDirection: "row", marginVertical: 12 }}>
           <Link href={`/ui/Alert`} passHref>
             <Button
               bg={COLORS.black}
@@ -147,8 +147,11 @@ const Ui: NextPageWithLayout = () => {
             </Button>
           </Link>
         </Div>
-        <Text style={{ fontWeight: "600", marginVertical: 20 }} fontSize="2xl">
-          Cherag UI: The Design easy and developer friendly.
+        <Text
+          style={{ fontWeight: "600", marginTop: 40, marginBottom: 25 }}
+          fontSize="2xl"
+        >
+          Most advantage of Cherag UI library.
         </Text>
         <Text>
            Multiplatform : Cherag UI supports multiple platforms; android, iOS
@@ -164,7 +167,7 @@ const Ui: NextPageWithLayout = () => {
           can also customise specific components for your app needs.
         </Text>
         <Text
-          style={{ fontWeight: "bold", marginTop: 30, marginBottom: 20 }}
+          style={{ fontWeight: "bold", marginTop: 40, marginBottom: 20 }}
           fontSize="2xl"
         >
           Create your own components
