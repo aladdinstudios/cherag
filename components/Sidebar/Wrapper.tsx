@@ -1,4 +1,5 @@
-import { COLORS, Div, Text } from "cherag-ui";
+import { Button, COLORS, Div, Text } from "cherag-ui";
+import Link from "next/link";
 import { ScrollView } from "react-native";
 import Sidebar from "./Sidebar";
 
@@ -11,15 +12,18 @@ const Wrapper = () => {
         alignItems: "center",
       }}
     >
-      <Text
-        fontSize="3xl"
-        style={{
-          color: COLORS.errorIcon,
-          marginBottom: 20,
-        }}
-      >
-        Components
-      </Text>
+      <Link href={`/ui`} passHref>
+        <Button
+          width={180}
+          bg={COLORS.white}
+          fontSize={25}
+          color={COLORS.errorIcon}
+          style={{ marginBottom: 20 }}
+        >
+          Components
+        </Button>
+      </Link>
+
       <ScrollView>
         <Sidebar>Alert</Sidebar>
         <Sidebar>Avatar</Sidebar>
