@@ -15,24 +15,54 @@ const ButtonComponent: NextPageWithLayout = () => {
   let __importCodeString = `import { Button } from 'cherag-ui'`;
   let __useCaseCodeStringArr: UsecaseArrayObjProps[] = [
     {
-      name: "",
+      name: "Example 1",
       code: `
     <Button
-      bg={COLORS.lightGray7}
-      color={COLORS.errorIcon}
-      width={300}
-      height={50}
-      borderWidth={1}
+      w={"20%"}
+      h={"10%"}
+      bg={COLORS.primary}
+      color={COLORS.white}
       borderRadius={10}
+      onPress={() => {
+        console.log("Button component test");
+      }}
+    >
+      Button component
+    </Button>`,
+    },
+    {
+      name: "Example 2",
+      code: `
+    <Button
+      w={"20%"}
+      h={"10%"}
+      borderRadius={5}
+      fontSize={18}
+      bg={COLORS.blue}
+      color={COLORS.white}
+      onPress={() => console.log("Button component test")}
       style={{
         justifyContent: "center",
         borderColor: COLORS.lightPrimary,
-      }}
-      onPress={() => {
-        console.log("Button component pressed");
+        marginBottom: 15,
       }}
     >
-      Button
+      Add product
+    </Button>`,
+    },
+    {
+      name: "Example 3",
+      code: `
+    <Button
+      w={"10%"}
+      h={"10%"}
+      borderRadius={5}
+      fontSize={12}
+      bg={COLORS.errorIcon}
+      color={COLORS.white}
+      onPress={() => console.log("Button component test")}
+    >
+      Submit
     </Button>`,
     },
   ];
@@ -44,7 +74,7 @@ const ButtonComponent: NextPageWithLayout = () => {
     },
     {
       name: "onPress",
-      type: "(values:any)=> any",
+      type: "(event: GestureResponderEvent) => void",
       des: "Providing button onPress Action.",
     },
     {
@@ -53,13 +83,13 @@ const ButtonComponent: NextPageWithLayout = () => {
       des: "Style of Button.",
     },
     {
-      name: "width",
-      type: "number",
-      des: "With of button.",
+      name: "w",
+      type: "string",
+      des: "Width of button.",
     },
     {
-      name: "height",
-      type: "number",
+      name: "h",
+      type: "string",
       des: "Height of button.",
     },
     {
@@ -91,6 +121,11 @@ const ButtonComponent: NextPageWithLayout = () => {
       name: "borderWidth",
       type: "number",
       des: "thickness of border.",
+    },
+    {
+      name: "fontWeight",
+      type: `TextStyle['fontWeight']`,
+      des: "fontWeight of Button text.",
     },
   ];
 
