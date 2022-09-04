@@ -8,13 +8,11 @@ import { ScrollView } from "react-native";
 
 const Ui: NextPageWithLayout = () => {
   const exampleComponent = `import {
-      Button,
       Checkbox,
       CheckboxItem,
       CheckboxValue,
       COLORS,
       Div,
-      Input,
       RadioButton,
       RadioButtonItem,
       RadioButtonValue,
@@ -26,7 +24,6 @@ const Ui: NextPageWithLayout = () => {
     import { StyleSheet } from 'react-native';
 
     export default function App() {
-      const [userName, setUserName] = useState<string>();
       const [checkboxes, setCheckboxes] = useState<CheckboxValue[]>([]);
       const [selectedRadio, setSelectedRadio] = useState<RadioButtonValue>(1);
 
@@ -35,9 +32,6 @@ const Ui: NextPageWithLayout = () => {
             <Text style={{ color: COLORS.black }} fontSize="md">
               Cherag-UI
             </Text>
-            <Div bg={'gray'} w={0} h={0} p={0} m={0}>
-              <Text>Div Commponent</Text>
-            </Div>
             <Div style={styles.radioBtnGroup}>
               <RadioButton
                 btnColor={COLORS.green}
@@ -54,25 +48,9 @@ const Ui: NextPageWithLayout = () => {
               <CheckboxItem value="3">Checkbox 3</CheckboxItem>
             </Checkbox>
             <Spinner color={COLORS.green} size={'large'} />
-            <Input
-              onChangeText={setUserName}
-              value={userName}
-              placeholder="Enter name"
-              leftIcon="lock"
-              rightIcon="eye"
-            />
-            <Button
-              bg={COLORS.softGray}
-              color={COLORS.black}
-              onPress={() => {
-                console.log('Button pressed');
-              }}
-            >
-              Button
-            </Button>
           </Div>
-      );
-    }
+        );
+      }
 
     const styles = StyleSheet.create({
       container: {
