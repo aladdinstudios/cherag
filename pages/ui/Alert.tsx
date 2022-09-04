@@ -1,4 +1,5 @@
-import { Alert } from "cherag-ui";
+import { Alert, Div } from "cherag-ui";
+import { useState } from "react";
 import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
 import { RenderItem } from "../../components/RenderItem";
@@ -9,14 +10,48 @@ import {
 import { NextPageWithLayout } from "../_app";
 
 const AlertComponent: NextPageWithLayout = () => {
+  const [alert, setAlert] = useState(true);
+
   let __componentName = "Alert";
   let __componentDescription =
     "Component for displaying messages, notifications, or other application state.";
   let __importCodeString = `import { Alert } from 'cherag-ui'`;
   let __useCaseCodeStringArr: UsecaseArrayObjProps[] = [
     {
-      name: "",
-      code: `<Alert status="success" title="Product add Successfully" />`,
+      name: "Example 1",
+      code: `   <Alert
+      alert={alert}
+      setAlert={setAlert}
+      status="warning"
+      title="Product add successfully"
+    />`,
+    },
+    {
+      name: "Example 2",
+      code: `   <Alert
+      alert={alert}
+      setAlert={setAlert}
+      status="success"
+      title="Product add successfully"
+    />`,
+    },
+    {
+      name: "Example 3",
+      code: `    <Alert
+      alert={alert}
+      setAlert={setAlert}
+      status="error"
+      title="Product add successfully"
+    />`,
+    },
+    {
+      name: "Example 4",
+      code: `    <Alert
+      alert={alert}
+      setAlert={setAlert}
+      status="info"
+      title="Product add successfully"
+    />`,
     },
   ];
   let __propertics: ProperticsProps[] = [
@@ -27,8 +62,18 @@ const AlertComponent: NextPageWithLayout = () => {
     },
     {
       name: "status",
-      type: "string",
+      type: "'success' | 'error' | 'warning' | 'info'",
       des: "The status of the alert",
+    },
+    {
+      name: "alert",
+      type: "boolean",
+      des: "Change state value",
+    },
+    {
+      name: "setAlert",
+      type: "(values: boolean) => boolean;",
+      des: "setAlert update current alert state",
     },
   ];
   return (
@@ -40,7 +85,32 @@ const AlertComponent: NextPageWithLayout = () => {
         usecaseCodeStringArr={__useCaseCodeStringArr}
         propertics={__propertics}
       >
-        <Alert status="success" title="Product add Successfully" />
+        <Div style={{ justifyContent: "space-around", flex: 1 }}>
+          <Alert
+            alert={alert}
+            setAlert={setAlert}
+            status="warning"
+            title="Product add successfully"
+          />
+          <Alert
+            alert={alert}
+            setAlert={setAlert}
+            status="success"
+            title="Product add successfully"
+          />
+          <Alert
+            alert={alert}
+            setAlert={setAlert}
+            status="error"
+            title="Product add successfully"
+          />
+          <Alert
+            alert={alert}
+            setAlert={setAlert}
+            status="info"
+            title="Product add successfully"
+          />
+        </Div>
       </RenderItem>
     </ScrollView>
   );

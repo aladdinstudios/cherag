@@ -23,7 +23,7 @@ export const RenderItem: FC<RenderItemProps> = ({
   propertics,
 }) => {
   return (
-    <Div style={{ marginTop: 80, marginLeft: 80, height: "auto" }}>
+    <Div style={{ marginTop: 80, marginLeft: 80 }}>
       <Text style={{ fontSize: 30, fontWeight: "bold", paddingBottom: 30 }}>
         {componentName}
       </Text>
@@ -61,7 +61,7 @@ export const RenderItem: FC<RenderItemProps> = ({
           marginTop: 30,
           backgroundColor: COLORS.lightGray5,
           width: "100%",
-          height: "30%",
+          height: "20%",
           alignItems: "center",
           justifyContent: "center",
         }}
