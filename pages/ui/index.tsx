@@ -7,7 +7,8 @@ import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { ScrollView } from "react-native";
 
 const Ui: NextPageWithLayout = () => {
-  const exampleComponent = `import {
+  const exampleComponent = `
+    import {
       Checkbox,
       CheckboxItem,
       CheckboxValue,

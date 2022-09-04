@@ -104,21 +104,60 @@ const ButtonComponent: NextPageWithLayout = () => {
         propertics={__propertics}
       >
         <Button
-          bg={COLORS.lightGray7}
-          color={COLORS.errorIcon}
-          width={300}
-          height={50}
-          borderWidth={1}
+          w={"20%"}
+          h={"10%"}
+          bg={COLORS.primary}
+          color={COLORS.white}
           borderRadius={10}
+          onPress={() => {
+            console.log("Button component test");
+          }}
+        >
+          Button component
+        </Button>
+        <Button
+          bg={COLORS.border}
+          color={COLORS.white}
+          w={"20%"}
+          h={"10%"}
+          borderWidth={1}
           style={{
             justifyContent: "center",
             borderColor: COLORS.lightPrimary,
+            marginVertical: 15,
           }}
           onPress={() => {
             console.log("Button component pressed");
           }}
         >
           Button
+        </Button>
+        <Button
+          w={"20%"}
+          h={"10%"}
+          borderRadius={5}
+          fontSize={18}
+          bg={COLORS.blue}
+          color={COLORS.white}
+          onPress={() => console.log("Button component test")}
+          style={{
+            justifyContent: "center",
+            borderColor: COLORS.lightPrimary,
+            marginBottom: 15,
+          }}
+        >
+          Add product
+        </Button>
+        <Button
+          w={"10%"}
+          h={"10%"}
+          borderRadius={5}
+          fontSize={12}
+          bg={COLORS.errorIcon}
+          color={COLORS.white}
+          onPress={() => console.log("Button component test")}
+        >
+          Submit
         </Button>
       </RenderItem>
     </ScrollView>

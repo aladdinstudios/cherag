@@ -450,9 +450,9 @@ character-reference-invalid@^1.0.0:
   integrity sha512-mKKUkUbhPpQlCOfIuZkvSEgktjPFIsZKRRbC6KWVEMvlzblj3i3asQv5ODsrwt0N3pHAEvjP8KTQPHkp0+6jOg==
 
 cherag-ui@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/cherag-ui/-/cherag-ui-0.1.1.tgz#04981df9a184777c106b997beb1b76732b80ddfc"
-  integrity sha512-HjhK3rJJTsqhOTav/uZoW0L/cSUaCr1lZFXnaZ52l0hMccBgPbVVPDRUJD4+8sNwylwcXBVTICROZ+yUx9jnAQ==
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/cherag-ui/-/cherag-ui-0.1.2.tgz#06ed053c0eb4c6260441d9512276d33cfb90d788"
+  integrity sha512-Ht+qhHC2WnB+uWEPA6u2Z+RrtYQQypYH294SWUga/XQhVVomzIVTZEFRSu+sMqa52e1YWu0pHoMI8RXshvbTDQ==
 
 cliui@^7.0.2:
   version "7.0.4"
