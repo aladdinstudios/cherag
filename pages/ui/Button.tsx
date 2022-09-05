@@ -66,7 +66,7 @@ const ButtonComponent: NextPageWithLayout = () => {
     </Button>`,
     },
   ];
-  let __propertics: ProperticsProps[] = [
+  let __properticsOne: ProperticsProps[] = [
     {
       name: "children",
       type: "React.ReactNode",
@@ -136,7 +136,8 @@ const ButtonComponent: NextPageWithLayout = () => {
         componentDescription={__componentDescription}
         importCodeString={__importCodeString}
         usecaseCodeStringArr={__useCaseCodeStringArr}
-        propertics={__propertics}
+        properticsOneTitle="Button"
+        properticsOne={__properticsOne}
       >
         <Button
           w={"20%"}

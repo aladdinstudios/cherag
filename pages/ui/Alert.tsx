@@ -54,7 +54,7 @@ const AlertComponent: NextPageWithLayout = () => {
     />`,
     },
   ];
-  let __propertics: ProperticsProps[] = [
+  let __properticsOne: ProperticsProps[] = [
     {
       name: "title",
       type: "string",
@@ -83,7 +83,8 @@ const AlertComponent: NextPageWithLayout = () => {
         componentDescription={__componentDescription}
         importCodeString={__importCodeString}
         usecaseCodeStringArr={__useCaseCodeStringArr}
-        propertics={__propertics}
+        properticsOneTitle="Alert"
+        properticsOne={__properticsOne}
       >
         <Div style={{ justifyContent: "space-around", flex: 1 }}>
           <Alert

@@ -36,7 +36,7 @@ const CardComponent: NextPageWithLayout = () => {
     </Card>`,
     },
   ];
-  let __propertics: ProperticsProps[] = [
+  let __properticsOne: ProperticsProps[] = [
     {
       name: "style",
       type: "StyleProp<ViewStyle>",
@@ -126,7 +126,8 @@ const CardComponent: NextPageWithLayout = () => {
         componentDescription={__componentDescription}
         importCodeString={__importCodeString}
         usecaseCodeStringArr={__useCaseCodeStringArr}
-        propertics={__propertics}
+        properticsOneTitle="Card"
+        properticsOne={__properticsOne}
       >
         <Div>
           <Card
