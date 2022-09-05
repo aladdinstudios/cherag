@@ -1,6 +1,6 @@
-import { Checkbox, CheckboxItem, CheckboxValue } from "cherag-ui";
+import { Checkbox, CheckboxItem, CheckboxValue, COLORS } from "cherag-ui";
 import { useState } from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, StyleSheet } from "react-native";
 import Layout from "../../components/Layout";
 import { RenderItem } from "../../components/RenderItem";
 import {
@@ -19,14 +19,19 @@ const CheckboxComponent: NextPageWithLayout = () => {
   let __useCaseCodeStringArr: UsecaseArrayObjProps[] = [
     {
       name: "",
-      code: `
-    render{
-        const [checkboxes, setCheckboxes] = useState<CheckboxValue[]>([]);
+      code: `   render{
+      const [checkboxes, setCheckboxes] = useState<CheckboxValue[]>([]);
       return(
         <Checkbox values={checkboxes} onChange={setCheckboxes}>
-            <CheckboxItem value="1">Checkbox 1</CheckboxItem>
-            <CheckboxItem value="2">Checkbox 2</CheckboxItem>
-            <CheckboxItem value="3">Checkbox 3</CheckboxItem>
+          <CheckboxItem iconSize={22} textStyle={styles.checkboxText} value="1">
+            Checkbox item 1
+          </CheckboxItem>
+          <CheckboxItem iconSize={22} textStyle={styles.checkboxText} value="2">
+            Checkbox item 2
+          </CheckboxItem>
+          <CheckboxItem iconSize={22} textStyle={styles.checkboxText} value="3">
+            Checkbox item 3
+          </CheckboxItem>
         </Checkbox>
         );
     };`,
@@ -59,9 +64,30 @@ const CheckboxComponent: NextPageWithLayout = () => {
         propertics={__propertics}
       >
         <Checkbox values={checkboxes} onChange={setCheckboxes}>
-          <CheckboxItem value="1">Checkbox 1</CheckboxItem>
-          <CheckboxItem value="2">Checkbox 2</CheckboxItem>
-          <CheckboxItem value="3">Checkbox 3</CheckboxItem>
+          <CheckboxItem
+            iconSize={22}
+            checkedIconColor={COLORS.red}
+            textStyle={styles.checkboxText}
+            value="1"
+          >
+            Checkbox item 1
+          </CheckboxItem>
+          <CheckboxItem
+            iconSize={22}
+            checkedIconColor={COLORS.red}
+            textStyle={styles.checkboxText}
+            value="2"
+          >
+            Checkbox item 2
+          </CheckboxItem>
+          <CheckboxItem
+            iconSize={22}
+            checkedIconColor={COLORS.red}
+            textStyle={styles.checkboxText}
+            value="3"
+          >
+            Checkbox item 3
+          </CheckboxItem>
         </Checkbox>
       </RenderItem>
     </ScrollView>
@@ -71,3 +97,9 @@ const CheckboxComponent: NextPageWithLayout = () => {
 CheckboxComponent.getLayout = (page) => <Layout>{page}</Layout>;
 
 export default CheckboxComponent;
+
+const styles = StyleSheet.create({
+  checkboxText: {
+    fontSize: 16,
+  },
+});

@@ -7,23 +7,25 @@ const Wrapper = () => {
   return (
     <Div
       style={{
-        width: "10%",
-        margin: 50,
-        alignItems: "center",
+        paddingLeft: "5%",
       }}
     >
-      <Link href={`/ui`} passHref>
-        <Button
-          width={180}
-          bg={COLORS.white}
-          fontSize={25}
-          color={COLORS.errorIcon}
-          style={{ marginBottom: 20 }}
-        >
-          Components
-        </Button>
-      </Link>
-
+      <Div
+        style={{
+          marginVertical: "25%",
+        }}
+      >
+        <Link href={`/ui`} passHref>
+          <Button
+            w="100"
+            bg={COLORS.white}
+            fontSize={28}
+            color={COLORS.errorIcon}
+          >
+            Components
+          </Button>
+        </Link>
+      </Div>
       <ScrollView>
         <Sidebar>Alert</Sidebar>
         <Sidebar>Avatar</Sidebar>
