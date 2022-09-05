@@ -40,7 +40,7 @@ const CheckboxComponent: NextPageWithLayout = () => {
   let __properticsOne: ProperticsProps[] = [
     {
       name: "values",
-      type: "string[]",
+      type: "CheckboxValues",
       des: "Selected items of checkbox.",
     },
     {
@@ -56,8 +56,8 @@ const CheckboxComponent: NextPageWithLayout = () => {
   ];
   let __properticsTwo: ProperticsProps[] = [
     {
-      name: "values",
-      type: "string[]",
+      name: "value",
+      type: "CheckboxValue",
       des: "Selected items of checkbox.",
     },
     {
@@ -71,14 +71,19 @@ const CheckboxComponent: NextPageWithLayout = () => {
       des: "Size of checkbox icon.",
     },
     {
-      name: "values",
-      type: "string[]",
-      des: "Selected items of checkbox.",
+      name: "textStyle",
+      type: "StyleProp<ViewStyle>",
+      des: "style of card container.",
     },
     {
-      name: "onChange",
-      type: "(values: any) => any",
-      des: "The callback return when any children Checkbox is checked or unchecked..",
+      name: "checkedIconColor",
+      type: "string",
+      des: "Checked icon color of checkbox.",
+    },
+    {
+      name: "uncheckedIconColor",
+      type: "string",
+      des: "Unchecked icon color of checkbox.",
     },
   ];
   return (
