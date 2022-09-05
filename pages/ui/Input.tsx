@@ -1,4 +1,4 @@
-import { COLORS, Input } from "cherag-ui";
+import { COLORS, Div, Input } from "cherag-ui";
 import { useState } from "react";
 import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
@@ -18,8 +18,7 @@ const InputComponent: NextPageWithLayout = () => {
   let __useCaseCodeStringArr: UsecaseArrayObjProps[] = [
     {
       name: "",
-      code: `
-    <Input
+      code: `   <Input
       onChangeText={setUserName}
       value={userName}
       placeholder="Enter name"
@@ -28,11 +27,13 @@ const InputComponent: NextPageWithLayout = () => {
       borderColor={COLORS.errorIcon}
       leftIconColor={COLORS.errorIcon}
       rightIconColor={COLORS.errorIcon}
-      placeholderTextColor={COLORS.border}
+      placeholderTextColor={COLORS.errorIcon}
+      w={200}
+      h={40}
     />`,
     },
   ];
-  let __propertics: ProperticsProps[] = [
+  let __properticsOne: ProperticsProps[] = [
     {
       name: "style",
       type: "StyleProp<ViewStyle>",
@@ -45,12 +46,12 @@ const InputComponent: NextPageWithLayout = () => {
     },
     {
       name: "onPressLeftIcon",
-      type: "(values:any)=> any",
+      type: "(event: GestureResponderEvent) => void",
       des: "onPressLeftIcon providing left icon action.",
     },
     {
       name: "onPressRightIcon",
-      type: "(values:any)=> any",
+      type: "(event: GestureResponderEvent) => void",
       des: "onPressRightIcon providing right icon action.",
     },
     {
@@ -94,9 +95,19 @@ const InputComponent: NextPageWithLayout = () => {
       des: "Border color of the Input.",
     },
     {
-      name: "inputBoxWidth",
+      name: "w",
       type: "number",
       des: "With of input box.",
+    },
+    {
+      name: "h",
+      type: "number",
+      des: "Height of input box.",
+    },
+    {
+      name: "textPadding",
+      type: "number",
+      des: "Padding of input text.",
     },
   ];
   return (
@@ -106,19 +117,70 @@ const InputComponent: NextPageWithLayout = () => {
         componentDescription={__componentDescription}
         importCodeString={__importCodeString}
         usecaseCodeStringArr={__useCaseCodeStringArr}
-        propertics={__propertics}
+        properticsOneTitle="Input propertics"
+        properticsOne={__properticsOne}
       >
-        <Input
-          onChangeText={setUserName}
-          value={userName}
-          placeholder="Enter name"
-          leftIcon="lock"
-          rightIcon="eye"
-          borderColor={COLORS.errorIcon}
-          leftIconColor={COLORS.errorIcon}
-          rightIconColor={COLORS.errorIcon}
-          placeholderTextColor={COLORS.border}
-        />
+        <Div
+          style={{
+            flex: 1,
+            flexDirection: "column",
+            justifyContent: "space-around",
+            alignItems: "center",
+          }}
+        >
+          <Input
+            onChangeText={setUserName}
+            value={userName}
+            placeholder="Enter name"
+            leftIcon="lock"
+            rightIcon="eye"
+            borderColor={COLORS.errorIcon}
+            leftIconColor={COLORS.errorIcon}
+            rightIconColor={COLORS.errorIcon}
+            placeholderTextColor={COLORS.errorIcon}
+            w={200}
+            h={40}
+          />
+          <Input
+            onChangeText={setUserName}
+            value={userName}
+            placeholder="Enter name"
+            leftIcon="lock"
+            rightIcon="eye"
+            borderColor={COLORS.blue}
+            leftIconColor={COLORS.blue}
+            rightIconColor={COLORS.blue}
+            placeholderTextColor={COLORS.blue}
+            w={300}
+            h={60}
+          />
+          <Input
+            onChangeText={setUserName}
+            value={userName}
+            placeholder="Enter name"
+            leftIcon="lock"
+            rightIcon="eye"
+            borderColor={COLORS.sayn}
+            leftIconColor={COLORS.sayn}
+            rightIconColor={COLORS.sayn}
+            placeholderTextColor={COLORS.sayn}
+            w={200}
+            h={30}
+          />
+          <Input
+            onChangeText={setUserName}
+            value={userName}
+            placeholder="Enter name"
+            leftIcon="lock"
+            rightIcon="eye"
+            borderColor={COLORS.red}
+            leftIconColor={COLORS.red}
+            rightIconColor={COLORS.red}
+            placeholderTextColor={COLORS.red}
+            w={120}
+            h={20}
+          />
+        </Div>
       </RenderItem>
     </ScrollView>
   );

@@ -14,14 +14,19 @@ const SpinnerComponent: NextPageWithLayout = () => {
   let __importCodeString = `import { Spinner } from 'cherag-ui'`;
   let __useCaseCodeStringArr: UsecaseArrayObjProps[] = [
     {
-      name: "",
-      code: `
-    <Spinner color={COLORS.errorIcon} size={"small"} />
-    <Spinner color={COLORS.errorIcon} size={"large"} />
-    <Spinner color={COLORS.errorIcon} size={70} />`,
+      name: "Example 1",
+      code: `    <Spinner color={COLORS.errorIcon} size={"small"} />`,
+    },
+    {
+      name: "Example 2",
+      code: `    <Spinner color={COLORS.errorIcon} size={"large"} />`,
+    },
+    {
+      name: "Example 3",
+      code: `    <Spinner color={COLORS.errorIcon} size={70} />`,
     },
   ];
-  let __propertics: ProperticsProps[] = [
+  let __properticsOne: ProperticsProps[] = [
     {
       name: "color",
       type: "string",
@@ -46,7 +51,8 @@ const SpinnerComponent: NextPageWithLayout = () => {
         componentDescription={__componentDescription}
         importCodeString={__importCodeString}
         usecaseCodeStringArr={__useCaseCodeStringArr}
-        propertics={__propertics}
+        properticsOneTitle="Spinner Propertics"
+        properticsOne={__properticsOne}
       >
         <Div
           style={{

@@ -1,4 +1,4 @@
-import { Dropdown, DropdownItem } from "cherag-ui";
+import { COLORS, Div, Dropdown, DropdownItem } from "cherag-ui";
 import { useState } from "react";
 import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
@@ -18,20 +18,28 @@ const DropdownComponent: NextPageWithLayout = () => {
   let __useCaseCodeStringArr: UsecaseArrayObjProps[] = [
     {
       name: "",
-      code: `
-    <Dropdown
-      onChange={setSelectItem}
-      selected={selectItem}
-      header="Choose Service"
-      width={80}
-    >
-      <DropdownItem value="one">Product one</DropdownItem>
-      <DropdownItem value="two">Product two</DropdownItem>
-      <DropdownItem value="three">Product three</DropdownItem>
-    </Dropdown>`,
+      code: `  import { COLORS, Div, Dropdown, DropdownItem } from "cherag-ui";
+
+  export default function App() {
+    const [selectItem, setSelectItem] = useState<string>();
+    return (
+      <Dropdown
+        onChange={setSelectItem}
+        selected={selectItem}
+        header="Choose your service"
+        w={'50%'}
+        borderColor={COLORS.softGray}
+      >
+        <DropdownItem value="Audio device">Audio device</DropdownItem>
+        <DropdownItem value="Video device">Video device</DropdownItem>
+        <DropdownItem value="Wifi device">Wifi device</DropdownItem>
+      </Dropdown>
+    );
+  };
+      `,
     },
   ];
-  let __propertics: ProperticsProps[] = [
+  let __properticsOne: ProperticsProps[] = [
     {
       name: "children",
       type: "React.ReactNode",
@@ -39,7 +47,7 @@ const DropdownComponent: NextPageWithLayout = () => {
     },
     {
       name: "onChange",
-      type: "(values: any) => any",
+      type: "(event: GestureResponderEvent) => void",
       des: "Change Dropdown item to save value to state elements of Dropdown.",
     },
     {
@@ -65,18 +73,35 @@ const DropdownComponent: NextPageWithLayout = () => {
         componentDescription={__componentDescription}
         importCodeString={__importCodeString}
         usecaseCodeStringArr={__useCaseCodeStringArr}
-        propertics={__propertics}
+        properticsOneTitle="Dropdown propertics"
+        properticsOne={__properticsOne}
       >
-        <Dropdown
-          onChange={setSelectItem}
-          selected={selectItem}
-          header="Choose Service"
-          width={180}
+        <Div
+          style={{
+            width: 400,
+            height: 30,
+          }}
         >
-          <DropdownItem value="one">Product one</DropdownItem>
-          <DropdownItem value="two">Product two</DropdownItem>
-          <DropdownItem value="three">Product three</DropdownItem>
-        </Dropdown>
+          <Dropdown
+            onChange={setSelectItem}
+            selected={selectItem}
+            header="Choose your service"
+            w="50%"
+            h="90%"
+            borderColor={COLORS.softGray}
+          >
+            <Div
+              style={{
+                top: 15,
+                backgroundColor: COLORS.transparentWhite,
+              }}
+            >
+              <DropdownItem value="Audio device">Audio device</DropdownItem>
+              <DropdownItem value="Video device">Video device</DropdownItem>
+              <DropdownItem value="Wifi device">Wifi device</DropdownItem>
+            </Div>
+          </Dropdown>
+        </Div>
       </RenderItem>
     </ScrollView>
   );

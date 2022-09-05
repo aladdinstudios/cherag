@@ -19,22 +19,21 @@ const RadioButtonComponent: NextPageWithLayout = () => {
   let __componentName = "RadioButton";
   let __componentDescription =
     "Radio buttons allows to selection a single option from a list.";
-  let __importCodeString = `import { RadioButton } from "cherag-ui"'`;
+  let __importCodeString = `import { RadioButton, RadioButtonValue, RadioButtonItem } from "cherag-ui"'`;
   let __useCaseCodeStringArr: UsecaseArrayObjProps[] = [
     {
       name: "",
-      code: `
-    <RadioButton
+      code: `   <RadioButton
       btnColor={COLORS.green}
       onChange={setSelectedRadio}
       selected={selectedRadio}
     >
-      <RadioButtonItem value={1}>Radio Item One</RadioButtonItem>
-      <RadioButtonItem value={2}>Radio Item Two</RadioButtonItem>
+      <RadioButtonItem value={1}>Radio button</RadioButtonItem>
+      <RadioButtonItem value={2}>Radio button</RadioButtonItem>
     </RadioButton>`,
     },
   ];
-  let __propertics: ProperticsProps[] = [
+  let __properticsOne: ProperticsProps[] = [
     {
       name: "children",
       type: "React.ReactNode",
@@ -42,18 +41,35 @@ const RadioButtonComponent: NextPageWithLayout = () => {
     },
     {
       name: "onChange",
-      type: "(values: any) => any",
+      type: "(event: GestureResponderEvent) => void",
       des: "Change RadioButton item to save value to state elements of RadioButton.",
     },
     {
       name: "selected",
-      type: "string | number",
+      type: "RadioButtonValue",
       des: "Store selected item.",
     },
     {
       name: "btnColor",
       type: "string",
       des: "Button color of RadioButton.",
+    },
+  ];
+  let __properticsTwo: ProperticsProps[] = [
+    {
+      name: "children",
+      type: "React.ReactNode",
+      des: "Child elements of RadioButtonItem.",
+    },
+    {
+      name: "btnColor",
+      type: "string",
+      des: "Button color of RadioButtonItem.",
+    },
+    {
+      name: "value",
+      type: "RadioButtonValue",
+      des: "Store selected RadioButtonItem value.",
     },
   ];
   return (
@@ -63,7 +79,10 @@ const RadioButtonComponent: NextPageWithLayout = () => {
         componentDescription={__componentDescription}
         importCodeString={__importCodeString}
         usecaseCodeStringArr={__useCaseCodeStringArr}
-        propertics={__propertics}
+        properticsOneTitle="RadioButton Propertics"
+        properticsTwoTitle="RadioButtonItem Propertics"
+        properticsOne={__properticsOne}
+        properticsTwo={__properticsTwo}
       >
         <RadioButton
           btnColor={COLORS.green}

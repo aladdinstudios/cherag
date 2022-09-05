@@ -15,14 +15,23 @@ const DividerComponent: NextPageWithLayout = () => {
   let __importCodeString = `import { Divider } from "cherag-ui"'`;
   let __useCaseCodeStringArr: UsecaseArrayObjProps[] = [
     {
-      name: "",
-      code: `
-    <Div style={{ width: "35%" }}>
-      <Divider color={COLORS.darkGray} thickness={2} />
-    </Div>`,
+      name: "Example 1",
+      code: `  <Divider w={400} color={COLORS.blue} thickness={2} />`,
+    },
+    {
+      name: "Example 2",
+      code: `  <Divider w={400} color={COLORS.green} thickness={3} />`,
+    },
+    {
+      name: "Example 3",
+      code: `  <Divider w={400} color={COLORS.red} thickness={5} />`,
+    },
+    {
+      name: "Example 4",
+      code: `  <Divider w={400} color={COLORS.darkGray} thickness={10} />`,
     },
   ];
-  let __propertics: ProperticsProps[] = [
+  let __properticsOne: ProperticsProps[] = [
     {
       name: "style",
       type: "StyleProp<ViewStyle>",
@@ -38,6 +47,11 @@ const DividerComponent: NextPageWithLayout = () => {
       type: "string",
       des: "Color of Divider.",
     },
+    {
+      name: "w",
+      type: "number",
+      des: "Width of Divider.",
+    },
   ];
   return (
     <ScrollView showsHorizontalScrollIndicator={false}>
@@ -46,10 +60,20 @@ const DividerComponent: NextPageWithLayout = () => {
         componentDescription={__componentDescription}
         importCodeString={__importCodeString}
         usecaseCodeStringArr={__useCaseCodeStringArr}
-        propertics={__propertics}
+        properticsOneTitle="Avatar"
+        properticsOne={__properticsOne}
       >
-        <Div style={{ width: "35%" }}>
-          <Divider color={COLORS.darkGray} thickness={2} />
+        <Div
+          style={{
+            flex: 1,
+            justifyContent: "space-around",
+          }}
+        >
+          <Divider w={400} color={COLORS.yellow} thickness={1} />
+          <Divider w={400} color={COLORS.blue} thickness={2} />
+          <Divider w={400} color={COLORS.green} thickness={3} />
+          <Divider w={400} color={COLORS.red} thickness={5} />
+          <Divider w={400} color={COLORS.darkGray} thickness={10} />
         </Div>
       </RenderItem>
     </ScrollView>

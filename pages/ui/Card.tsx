@@ -1,4 +1,4 @@
-import { Card, COLORS } from "cherag-ui";
+import { Card, COLORS, Div } from "cherag-ui";
 import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
 import { RenderItem } from "../../components/RenderItem";
@@ -12,37 +12,36 @@ const CardComponent: NextPageWithLayout = () => {
   let __componentName = "Card";
   let __componentDescription =
     "Card component is a structure of material that provide as an entry point to more detailed information.";
-  let __importCodeString = `import { Card } from 'cherag-ui'`;
+  let __importCodeString = `import { Card, COLORS } from "cherag-ui";`;
   let __useCaseCodeStringArr: UsecaseArrayObjProps[] = [
     {
       name: "",
-      code: `
-    <Card
-      w={250}
-      style={{
-        width: 250,
-        height: 380,
-      }}
+      code: `   <Card
       title="The Garden City"
       subTitle="The Silicon Valley of BD"
       category="Photo"
       footerText="6 mins ago"
-      footerStyle={{
-        width: 80,
-        fontSize: 14,
-      }}
-      paragraphStyle={{ fontSize: 14, color: COLORS.blackish }}
+      w={180}
+      h={270}
+      imgH={3}
+      shadow={10}
+      paragraphStyle={{ fontSize: 12 }}
       subTitleStyle={{ fontSize: 12 }}
-      titleStyle={{ fontSize: 22, color: COLORS.blackish }}
+      categoryBgColor={COLORS.primary}
+      categoryTextColor={COLORS.white}
     >
-      Bengaluru also called Bangalore is the center of BD high-tech
-      industry. The city is also known for its parks and nightlife Bengaluru
-      also called Bangalore is the center of BD high-tech industry. The city
-      is also known for its parks and nightlife
-   </Card>`,
+      Bangladesh is the center of BD high-tech industry. The city is also
+      known for its parks and nightlife Bangladesh is the center of BD
+      high-tech industry.
+    </Card>`,
     },
   ];
-  let __propertics: ProperticsProps[] = [
+  let __properticsOne: ProperticsProps[] = [
+    {
+      name: "style",
+      type: "StyleProp<ViewStyle>",
+      des: "style of card container.",
+    },
     {
       name: "title",
       type: "string",
@@ -66,17 +65,27 @@ const CardComponent: NextPageWithLayout = () => {
     {
       name: "w",
       type: "number",
-      des: "Image with of card.",
+      des: "Image and with of card.",
     },
     {
       name: "h",
       type: "number",
+      des: "height of card.",
+    },
+    {
+      name: "imgH",
+      type: "1 | 2 | 3 | 4 | 5",
       des: "Image height of card.",
     },
     {
       name: "categoryBgColor",
       type: "string",
       des: "Category background color of card.",
+    },
+    {
+      name: "categoryTextColor",
+      type: "string",
+      des: "Category text color of card.",
     },
     {
       name: "children",
@@ -98,6 +107,16 @@ const CardComponent: NextPageWithLayout = () => {
       type: "StyleProp<ViewStyle>",
       des: "Paragraph style of card.",
     },
+    {
+      name: "footerStyle",
+      type: "StyleProp<ViewStyle>",
+      des: "Footer style of card.",
+    },
+    {
+      name: "shadow",
+      type: "number",
+      des: "Shadow of card.",
+    },
   ];
 
   return (
@@ -107,31 +126,29 @@ const CardComponent: NextPageWithLayout = () => {
         componentDescription={__componentDescription}
         importCodeString={__importCodeString}
         usecaseCodeStringArr={__useCaseCodeStringArr}
-        propertics={__propertics}
+        properticsOneTitle="Card"
+        properticsOne={__properticsOne}
       >
-        <Card
-          w={250}
-          style={{
-            width: 250,
-            height: 380,
-          }}
-          title="The Garden City"
-          subTitle="The Silicon Valley of BD"
-          category="Photo"
-          footerText="6 mins ago"
-          footerStyle={{
-            width: 80,
-            fontSize: 14,
-          }}
-          paragraphStyle={{ fontSize: 14, color: COLORS.blackish }}
-          subTitleStyle={{ fontSize: 12 }}
-          titleStyle={{ fontSize: 22, color: COLORS.blackish }}
-        >
-          Bengaluru also called Bangalore is the center of BD high-tech
-          industry. The city is also known for its parks and nightlife Bengaluru
-          also called Bangalore is the center of BD high-tech industry. The city
-          is also known for its parks and nightlife
-        </Card>
+        <Div>
+          <Card
+            title="The Garden City"
+            subTitle="The Silicon Valley of BD"
+            category="Photo"
+            footerText="6 mins ago"
+            w={200}
+            h={300}
+            imgH={3}
+            shadow={10}
+            paragraphStyle={{ fontSize: 12 }}
+            subTitleStyle={{ fontSize: 12 }}
+            categoryBgColor={COLORS.primary}
+            categoryTextColor={COLORS.white}
+          >
+            Bangladesh is the center of BD high-tech industry. The city is also
+            known for its parks and nightlife Bangladesh is the center of BD
+            high-tech industry.
+          </Card>
+        </Div>
       </RenderItem>
     </ScrollView>
   );

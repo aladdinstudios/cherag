@@ -1,4 +1,4 @@
-import { Image } from "cherag-ui";
+import { Div, Image } from "cherag-ui";
 import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
 import { RenderItem } from "../../components/RenderItem";
@@ -16,30 +16,28 @@ const ImageComponent: NextPageWithLayout = () => {
   let __useCaseCodeStringArr: UsecaseArrayObjProps[] = [
     {
       name: "absolute import",
-      code: `
-    <Image
+      code: `    <Image
       w={120}
       h={120}
       size={10}
       source={require("../../assets/cat.jpg")}
-      alt="Immage not found"
+      alt="Image not found"
     />`,
     },
     {
-      name: "Url import",
-      code: `
-    <Image
+      name: "url import",
+      code: `    <Image
       w={80}
       h={80}
-      size={10}
+      size={90}
       source={{
         uri: "https://avatars.githubusercontent.com/u/1342004?s=64&v=4",
       }}
-      alt="Immage not found"
+      alt="Image not found"
     />`,
     },
   ];
-  let __propertics: ProperticsProps[] = [
+  let __properticsOne: ProperticsProps[] = [
     {
       name: "w",
       type: "number",
@@ -60,6 +58,11 @@ const ImageComponent: NextPageWithLayout = () => {
       type: "StyleProp<ImageSource>",
       des: "Style of Image.",
     },
+    {
+      name: "alt",
+      type: "string",
+      des: "Alternate of image sourec when image url is broken.",
+    },
   ];
   return (
     <ScrollView showsHorizontalScrollIndicator={false}>
@@ -68,24 +71,32 @@ const ImageComponent: NextPageWithLayout = () => {
         componentDescription={__componentDescription}
         importCodeString={__importCodeString}
         usecaseCodeStringArr={__useCaseCodeStringArr}
-        propertics={__propertics}
+        properticsOneTitle="Image propertics"
+        properticsOne={__properticsOne}
       >
-        <>
+        <Div
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-around",
+          }}
+        >
           <Image
             w={120}
             h={120}
             size={10}
             source={require("../../assets/cat.jpg")}
+            alt="Image not found"
           />
           <Image
             w={80}
             h={80}
-            size={90}
+            size={10}
             source={{
               uri: "https://avatars.githubusercontent.com/u/1342004?s=64&v=4",
             }}
+            alt="Image not found"
           />
-        </>
+        </Div>
       </RenderItem>
     </ScrollView>
   );

@@ -16,8 +16,7 @@ const AvatarComponent: NextPageWithLayout = () => {
   let __useCaseCodeStringArr: UsecaseArrayObjProps[] = [
     {
       name: "Avatar.Image",
-      code: `
-    <Avatar.Image
+      code: `   <Avatar.Image
       size={60}
       dotSize={20}
       dotColor={COLORS.green}
@@ -28,8 +27,7 @@ const AvatarComponent: NextPageWithLayout = () => {
     },
     {
       name: "Avatar.Icon",
-      code: `
-    <Avatar.Icon
+      code: `   <Avatar.Icon
       style={{ paddingTop: 10 }}
       iconColor={COLORS.red}
       bgColor={COLORS.lightGray}
@@ -39,8 +37,7 @@ const AvatarComponent: NextPageWithLayout = () => {
     },
     {
       name: "Avatar.Text",
-      code: `
-    <Avatar.Text
+      code: `   <Avatar.Text
       style={{ paddingTop: 20 }}
       bgColor={COLORS.border}
       textColor={COLORS.white}
@@ -49,7 +46,7 @@ const AvatarComponent: NextPageWithLayout = () => {
     />`,
     },
   ];
-  let __propertics: ProperticsProps[] = [
+  let __properticsOne: ProperticsProps[] = [
     {
       name: "dotSize",
       type: "number",
@@ -83,7 +80,8 @@ const AvatarComponent: NextPageWithLayout = () => {
         componentDescription={__componentDescription}
         importCodeString={__importCodeString}
         usecaseCodeStringArr={__useCaseCodeStringArr}
-        propertics={__propertics}
+        properticsOneTitle="Avatar propertics"
+        properticsOne={__properticsOne}
       >
         <Div
           style={{

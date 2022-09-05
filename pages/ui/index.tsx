@@ -1,20 +1,19 @@
 import { Button, COLORS, Div, Text } from "cherag-ui";
 import Link from "next/link";
-import Layout from "../../components/Layout";
-import { NextPageWithLayout } from "../_app";
+import { ScrollView } from "react-native";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { ScrollView } from "react-native";
+import Layout from "../../components/Layout";
+import { NextPageWithLayout } from "../_app";
 
 const Ui: NextPageWithLayout = () => {
-  const exampleComponent = `import {
-      Button,
+  const exampleComponent = `
+    import {
       Checkbox,
       CheckboxItem,
       CheckboxValue,
       COLORS,
       Div,
-      Input,
       RadioButton,
       RadioButtonItem,
       RadioButtonValue,
@@ -26,7 +25,6 @@ const Ui: NextPageWithLayout = () => {
     import { StyleSheet } from 'react-native';
 
     export default function App() {
-      const [userName, setUserName] = useState<string>();
       const [checkboxes, setCheckboxes] = useState<CheckboxValue[]>([]);
       const [selectedRadio, setSelectedRadio] = useState<RadioButtonValue>(1);
 
@@ -35,9 +33,6 @@ const Ui: NextPageWithLayout = () => {
             <Text style={{ color: COLORS.black }} fontSize="md">
               Cherag-UI
             </Text>
-            <Div bg={'gray'} w={0} h={0} p={0} m={0}>
-              <Text>Div Commponent</Text>
-            </Div>
             <Div style={styles.radioBtnGroup}>
               <RadioButton
                 btnColor={COLORS.green}
@@ -54,25 +49,9 @@ const Ui: NextPageWithLayout = () => {
               <CheckboxItem value="3">Checkbox 3</CheckboxItem>
             </Checkbox>
             <Spinner color={COLORS.green} size={'large'} />
-            <Input
-              onChangeText={setUserName}
-              value={userName}
-              placeholder="Enter name"
-              leftIcon="lock"
-              rightIcon="eye"
-            />
-            <Button
-              bg={COLORS.softGray}
-              color={COLORS.black}
-              onPress={() => {
-                console.log('Button pressed');
-              }}
-            >
-              Button
-            </Button>
           </Div>
-      );
-    }
+        );
+      }
 
     const styles = StyleSheet.create({
       container: {
@@ -86,7 +65,7 @@ const Ui: NextPageWithLayout = () => {
     });`;
   return (
     <ScrollView>
-      <Div style={{ width: "37%", marginVertical: 50 }}>
+      <Div style={{ width: "35%", marginVertical: 50, marginHorizontal: "2%" }}>
         <Text fontSize="4xl">
           Cross-platform Cherag UI design for React Native.
         </Text>
@@ -113,8 +92,8 @@ const Ui: NextPageWithLayout = () => {
             <Button
               bg={COLORS.black}
               color={COLORS.white}
-              width={250}
-              height={40}
+              w="30%"
+              h="130%"
               borderWidth={1}
               borderRadius={5}
               fontSize={16}
@@ -131,8 +110,8 @@ const Ui: NextPageWithLayout = () => {
             <Button
               bg={COLORS.blue}
               color={COLORS.white}
-              width={150}
-              height={40}
+              w="15%"
+              h="130%"
               borderWidth={1}
               borderRadius={5}
               fontSize={16}
@@ -186,8 +165,8 @@ const Ui: NextPageWithLayout = () => {
           <Button
             bg={COLORS.black}
             color={COLORS.white}
-            width={150}
-            height={40}
+            w="15%"
+            h="2%"
             borderWidth={1}
             borderRadius={5}
             fontSize={15}

@@ -1,4 +1,4 @@
-import { COLORS, TextArea } from "cherag-ui";
+import { COLORS, Div, TextArea } from "cherag-ui";
 import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
 import { RenderItem } from "../../components/RenderItem";
@@ -15,20 +15,29 @@ const TextAreaComponent: NextPageWithLayout = () => {
   let __importCodeString = `import { COLORS, TextArea } from "cherag-ui"'`;
   let __useCaseCodeStringArr: UsecaseArrayObjProps[] = [
     {
-      name: "",
-      code: `
-    <TextArea
+      name: "Example 1",
+      code: `    <TextArea
       borderRadious={15}
       borderWidth={1.5}
-      h={150}
-      numberOfLines={200}
+      numberOfLines={10}
       placeholder="Write your opinion"
       placeholderTextColor={COLORS.border}
-      style={{ width: 300 }}
+      w="40%"
+    />`,
+    },
+    {
+      name: "Example 2",
+      code: `    <TextArea
+      borderRadious={15}
+      borderWidth={1.5}
+      numberOfLines={4}
+      placeholder="Write your opinion"
+      placeholderTextColor={COLORS.border}
+      w="30%"
     />`,
     },
   ];
-  let __propertics: ProperticsProps[] = [
+  let __properticsOne: ProperticsProps[] = [
     {
       name: "style",
       type: "StyleProp<ViewStyle>",
@@ -45,9 +54,14 @@ const TextAreaComponent: NextPageWithLayout = () => {
       des: "Border radious of TextArea.",
     },
     {
-      name: "h",
-      type: "number",
-      des: "Height of TextArea.",
+      name: "borderColor",
+      type: "string",
+      des: "Border color of TextArea.",
+    },
+    {
+      name: "w",
+      type: "string",
+      des: "Width of TextArea.",
     },
     {
       name: "placeholder",
@@ -72,16 +86,25 @@ const TextAreaComponent: NextPageWithLayout = () => {
         componentDescription={__componentDescription}
         importCodeString={__importCodeString}
         usecaseCodeStringArr={__useCaseCodeStringArr}
-        propertics={__propertics}
+        properticsOneTitle="TextArea Propertics"
+        properticsOne={__properticsOne}
       >
         <TextArea
           borderRadious={15}
           borderWidth={1.5}
-          h={150}
-          numberOfLines={200}
+          numberOfLines={10}
           placeholder="Write your opinion"
           placeholderTextColor={COLORS.border}
-          style={{ width: 300 }}
+          w="40%"
+          style={{ marginBottom: 10 }}
+        />
+        <TextArea
+          borderRadious={15}
+          borderWidth={1.5}
+          numberOfLines={4}
+          placeholder="Write your opinion"
+          placeholderTextColor={COLORS.border}
+          w="30%"
         />
       </RenderItem>
     </ScrollView>
