@@ -37,7 +37,7 @@ const CheckboxComponent: NextPageWithLayout = () => {
     };`,
     },
   ];
-  let __propertics: ProperticsProps[] = [
+  let __properticsOne: ProperticsProps[] = [
     {
       name: "values",
       type: "string[]",
@@ -54,6 +54,33 @@ const CheckboxComponent: NextPageWithLayout = () => {
       des: "The callback return when any children Checkbox is checked or unchecked..",
     },
   ];
+  let __properticsTwo: ProperticsProps[] = [
+    {
+      name: "values",
+      type: "string[]",
+      des: "Selected items of checkbox.",
+    },
+    {
+      name: "children",
+      type: "React.ReactNode",
+      des: "Child elements of checkbox.",
+    },
+    {
+      name: "iconSize",
+      type: "number",
+      des: "Size of checkbox icon.",
+    },
+    {
+      name: "values",
+      type: "string[]",
+      des: "Selected items of checkbox.",
+    },
+    {
+      name: "onChange",
+      type: "(values: any) => any",
+      des: "The callback return when any children Checkbox is checked or unchecked..",
+    },
+  ];
   return (
     <ScrollView showsHorizontalScrollIndicator={false}>
       <RenderItem
@@ -61,7 +88,10 @@ const CheckboxComponent: NextPageWithLayout = () => {
         componentDescription={__componentDescription}
         importCodeString={__importCodeString}
         usecaseCodeStringArr={__useCaseCodeStringArr}
-        propertics={__propertics}
+        properticsOneTitle="Checkbox"
+        properticsOne={__properticsOne}
+        properticsTwoTitle="CheckboxItem"
+        properticsTwo={__properticsTwo}
       >
         <Checkbox values={checkboxes} onChange={setCheckboxes}>
           <CheckboxItem
