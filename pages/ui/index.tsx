@@ -1,10 +1,10 @@
 import { Button, COLORS, Div, Text } from "cherag-ui";
 import Link from "next/link";
-import Layout from "../../components/Layout";
-import { NextPageWithLayout } from "../_app";
+import { ScrollView } from "react-native";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { ScrollView } from "react-native";
+import Layout from "../../components/Layout";
+import { NextPageWithLayout } from "../_app";
 
 const Ui: NextPageWithLayout = () => {
   const exampleComponent = `
@@ -92,8 +92,8 @@ const Ui: NextPageWithLayout = () => {
             <Button
               bg={COLORS.black}
               color={COLORS.white}
-              width={250}
-              height={40}
+              w="30%"
+              h="130%"
               borderWidth={1}
               borderRadius={5}
               fontSize={16}
@@ -110,8 +110,8 @@ const Ui: NextPageWithLayout = () => {
             <Button
               bg={COLORS.blue}
               color={COLORS.white}
-              width={150}
-              height={40}
+              w="15%"
+              h="130%"
               borderWidth={1}
               borderRadius={5}
               fontSize={16}
@@ -165,8 +165,8 @@ const Ui: NextPageWithLayout = () => {
           <Button
             bg={COLORS.black}
             color={COLORS.white}
-            width={150}
-            height={40}
+            w="15%"
+            h="2%"
             borderWidth={1}
             borderRadius={5}
             fontSize={15}
