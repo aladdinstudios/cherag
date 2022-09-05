@@ -80,7 +80,7 @@ const AvatarComponent: NextPageWithLayout = () => {
         componentDescription={__componentDescription}
         importCodeString={__importCodeString}
         usecaseCodeStringArr={__useCaseCodeStringArr}
-        properticsOneTitle="Avatar"
+        properticsOneTitle="Avatar propertics"
         properticsOne={__properticsOne}
       >
         <Div

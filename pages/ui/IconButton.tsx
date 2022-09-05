@@ -1,4 +1,4 @@
-import { COLORS, IconButton } from "cherag-ui";
+import { COLORS, Div, IconButton } from "cherag-ui";
 import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
 import { RenderItem } from "../../components/RenderItem";
@@ -12,22 +12,32 @@ const IconButtonComponent: NextPageWithLayout = () => {
   let __componentName = "IconButton";
   let __componentDescription =
     "Use the IconButton as like Button component without text.";
-  let __importCodeString = `import { IconButton } from "cherag-ui"'`;
+  let __importCodeString = `import { IconButton, COLORS } from "cherag-ui"'`;
   let __useCaseCodeStringArr: UsecaseArrayObjProps[] = [
     {
-      name: "",
-      code: `
-    <IconButton
-      icon="rocket"
+      name: "Example 1",
+      code: `   <IconButton
+      icon="heart"
       onPress={() => {
-        console.log("Icon Button pressed");
+        console.log("Test IconButton component");
       }}
       size={68}
       color={COLORS.red}
     />`,
     },
+    {
+      name: "Example 2",
+      code: `   <IconButton
+      icon="train-car"
+      onPress={() => {
+        console.log("Test IconButton component");
+      }}
+      size={68}
+      color={COLORS.blue}
+    />`,
+    },
   ];
-  let __propertics: ProperticsProps[] = [
+  let __properticsOne: ProperticsProps[] = [
     {
       name: "style",
       type: "StyleProp<ViewStyle>",
@@ -55,7 +65,7 @@ const IconButtonComponent: NextPageWithLayout = () => {
     },
     {
       name: "onPress",
-      type: "(values: any) => any",
+      type: "(event: GestureResponderEvent) => void",
       des: "Make an action of IconButton.",
     },
   ];
@@ -66,16 +76,55 @@ const IconButtonComponent: NextPageWithLayout = () => {
         componentDescription={__componentDescription}
         importCodeString={__importCodeString}
         usecaseCodeStringArr={__useCaseCodeStringArr}
-        propertics={__propertics}
+        properticsOneTitle="IconButton propertics"
+        properticsOne={__properticsOne}
       >
-        <IconButton
-          icon="rocket"
-          onPress={() => {
-            console.log("Test IconButton component");
+        <Div
+          style={{
+            flexDirection: "row",
           }}
-          size={68}
-          color={COLORS.red}
-        />
+        >
+          <IconButton
+            icon="alarm-multiple"
+            onPress={() => {
+              console.log("Test IconButton component");
+            }}
+            size={68}
+            color={COLORS.red}
+          />
+          <IconButton
+            icon="alien-outline"
+            onPress={() => {
+              console.log("Test IconButton component");
+            }}
+            size={68}
+            color={COLORS.blue}
+          />
+          <IconButton
+            icon="rocket-outline"
+            onPress={() => {
+              console.log("Test IconButton component");
+            }}
+            size={68}
+            color={COLORS.red}
+          />
+          <IconButton
+            icon="train-car"
+            onPress={() => {
+              console.log("Test IconButton component");
+            }}
+            size={68}
+            color={COLORS.blue}
+          />
+          <IconButton
+            icon="heart"
+            onPress={() => {
+              console.log("Test IconButton component");
+            }}
+            size={68}
+            color={COLORS.red}
+          />
+        </Div>
       </RenderItem>
     </ScrollView>
   );
