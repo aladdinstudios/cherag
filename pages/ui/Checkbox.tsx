@@ -93,9 +93,9 @@ const CheckboxComponent: NextPageWithLayout = () => {
         componentDescription={__componentDescription}
         importCodeString={__importCodeString}
         usecaseCodeStringArr={__useCaseCodeStringArr}
-        properticsOneTitle="Checkbox"
+        properticsOneTitle="Checkbox Propertics"
         properticsOne={__properticsOne}
-        properticsTwoTitle="CheckboxItem"
+        properticsTwoTitle="CheckboxItem Propertics"
         properticsTwo={__properticsTwo}
       >
         <Checkbox values={checkboxes} onChange={setCheckboxes}>

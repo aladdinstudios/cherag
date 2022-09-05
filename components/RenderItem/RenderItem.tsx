@@ -79,7 +79,7 @@ export const RenderItem: FC<RenderItemProps> = ({
           <Divider
             thickness={1}
             color={ProjectColor.border}
-            w={650}
+            w={850}
             style={{
               marginVertical: 10,
             }}
@@ -93,7 +93,7 @@ export const RenderItem: FC<RenderItemProps> = ({
                   <Text style={{ width: 500 }}>{item.des}</Text>
                 </Div>
                 <Divider
-                  w={650}
+                  w={850}
                   thickness={1}
                   color={ProjectColor.border}
                   style={{
