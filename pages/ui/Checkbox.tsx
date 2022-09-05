@@ -50,7 +50,7 @@ const CheckboxComponent: NextPageWithLayout = () => {
     },
     {
       name: "onChange",
-      type: "(values: any) => any",
+      type: "(event: GestureResponderEvent) => void",
       des: "The callback return when any children Checkbox is checked or unchecked..",
     },
   ];
