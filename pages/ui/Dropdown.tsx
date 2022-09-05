@@ -47,7 +47,7 @@ const DropdownComponent: NextPageWithLayout = () => {
     },
     {
       name: "onChange",
-      type: "(values: any) => any",
+      type: "(event: GestureResponderEvent) => void",
       des: "Change Dropdown item to save value to state elements of Dropdown.",
     },
     {

@@ -1,4 +1,4 @@
-import { Switch } from "cherag-ui";
+import { COLORS, Div, Switch } from "cherag-ui";
 import { useState } from "react";
 import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
@@ -17,16 +17,29 @@ const SwitchComponent: NextPageWithLayout = () => {
   let __importCodeString = `import { Switch } from "cherag-ui"'`;
   let __useCaseCodeStringArr: UsecaseArrayObjProps[] = [
     {
-      name: "",
-      code: `
-    <Switch
-      size="lg"
-      isSwitchCheck={isSwitchCheck}
-      setIsSwitchCheck={setIsSwitchCheck}
-    />`,
+      name: "Example 1",
+      code: `     <Switch
+        size="sm"
+        offTrackColor={COLORS.red}
+        onTrackColor={COLORS.green}
+        isSwitchCheck={isSwitchCheck}
+        setIsSwitchCheck={setIsSwitchCheck}
+        thumbColor={COLORS.lightGray7}
+      />`,
+    },
+    {
+      name: "Example 2",
+      code: `     <Switch
+        size="md"
+        offTrackColor={COLORS.red}
+        onTrackColor={COLORS.green}
+        isSwitchCheck={isSwitchCheck}
+        setIsSwitchCheck={setIsSwitchCheck}
+        thumbColor={COLORS.lightGray7}
+      />`,
     },
   ];
-  let __propertics: ProperticsProps[] = [
+  let __properticsOne: ProperticsProps[] = [
     {
       name: "style",
       type: "StyleProp<ViewStyle>",
@@ -35,7 +48,7 @@ const SwitchComponent: NextPageWithLayout = () => {
     {
       name: "size",
       type: "string",
-      des: "'sm' | 'md' | 'lg'",
+      des: "sm | md | lg",
     },
     {
       name: "disabled",
@@ -49,7 +62,7 @@ const SwitchComponent: NextPageWithLayout = () => {
     },
     {
       name: "setIsSwitchCheck",
-      type: "(values:any): void",
+      type: "(event: GestureResponderEvent) => void",
       des: "Change and save function for switch active status .",
     },
     {
@@ -75,13 +88,51 @@ const SwitchComponent: NextPageWithLayout = () => {
         componentDescription={__componentDescription}
         importCodeString={__importCodeString}
         usecaseCodeStringArr={__useCaseCodeStringArr}
-        propertics={__propertics}
+        properticsOneTitle="Switch Propertics"
+        properticsOne={__properticsOne}
       >
-        <Switch
-          size="lg"
-          isSwitchCheck={isSwitchCheck}
-          setIsSwitchCheck={setIsSwitchCheck}
-        />
+        <Div style={{ flex: 1, justifyContent: "space-around" }}>
+          <Switch
+            size="sm"
+            offTrackColor={COLORS.red}
+            onTrackColor={COLORS.green}
+            isSwitchCheck={isSwitchCheck}
+            setIsSwitchCheck={setIsSwitchCheck}
+            thumbColor={COLORS.lightGray7}
+          />
+          <Switch
+            size="md"
+            offTrackColor={COLORS.red}
+            onTrackColor={COLORS.green}
+            isSwitchCheck={isSwitchCheck}
+            setIsSwitchCheck={setIsSwitchCheck}
+            thumbColor={COLORS.lightGray7}
+          />
+          <Switch
+            size="lg"
+            offTrackColor={COLORS.red}
+            onTrackColor={COLORS.green}
+            isSwitchCheck={isSwitchCheck}
+            setIsSwitchCheck={setIsSwitchCheck}
+            thumbColor={COLORS.lightGray7}
+          />
+          <Switch
+            size="md"
+            offTrackColor={COLORS.red}
+            onTrackColor={COLORS.green}
+            isSwitchCheck={isSwitchCheck}
+            setIsSwitchCheck={setIsSwitchCheck}
+            thumbColor={COLORS.lightGray7}
+          />
+          <Switch
+            size="sm"
+            offTrackColor={COLORS.red}
+            onTrackColor={COLORS.green}
+            isSwitchCheck={isSwitchCheck}
+            setIsSwitchCheck={setIsSwitchCheck}
+            thumbColor={COLORS.lightGray7}
+          />
+        </Div>
       </RenderItem>
     </ScrollView>
   );
