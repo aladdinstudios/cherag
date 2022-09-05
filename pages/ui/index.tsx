@@ -65,7 +65,7 @@ const Ui: NextPageWithLayout = () => {
     });`;
   return (
     <ScrollView>
-      <Div style={{ width: "37%", marginVertical: 50 }}>
+      <Div style={{ width: "35%", marginVertical: 50, marginHorizontal: "2%" }}>
         <Text fontSize="4xl">
           Cross-platform Cherag UI design for React Native.
         </Text>
