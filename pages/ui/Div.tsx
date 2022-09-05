@@ -39,7 +39,7 @@ const DivComponent: NextPageWithLayout = () => {
     </Div>`,
     },
   ];
-  let __propertics: ProperticsProps[] = [
+  let __properticsOne: ProperticsProps[] = [
     {
       name: "children",
       type: "React.ReactNode",
@@ -83,11 +83,32 @@ const DivComponent: NextPageWithLayout = () => {
         componentDescription={__componentDescription}
         importCodeString={__importCodeString}
         usecaseCodeStringArr={__useCaseCodeStringArr}
-        propertics={__propertics}
+        properticsOneTitle="Div propertics"
+        properticsOne={__properticsOne}
       >
         <Div
           bg={COLORS.errorIcon}
           w={200}
+          h={100}
+          p={10}
+          m={10}
+          style={{
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Text
+            fontSize="xl"
+            style={{
+              color: COLORS.white,
+            }}
+          >
+            Div Commponent
+          </Text>
+        </Div>
+        <Div
+          bg={COLORS.border}
+          w={400}
           h={100}
           p={10}
           m={10}
