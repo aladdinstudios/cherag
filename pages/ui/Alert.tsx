@@ -62,7 +62,7 @@ const AlertComponent: NextPageWithLayout = () => {
     },
     {
       name: "status",
-      type: "'success' | 'error' | 'warning' | 'info'",
+      type: "success | error | warning | info",
       des: "The status of the alert",
     },
     {
