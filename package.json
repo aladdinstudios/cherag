@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export -o docs",
-    "postbuild": "echo '# THIS IS NEEDED FOR NEXT JS STATIC FILES TO BE SERVED ON GH PAGES' > docs/.nojekyll",
+    "build": "next build && next export",
+    "postbuild": "echo '# THIS IS NEEDED FOR NEXT JS STATIC FILES TO BE SERVED ON GH PAGES' > out/.nojekyll",
     "start": "next start",
     "lint": "next lint"
   },
