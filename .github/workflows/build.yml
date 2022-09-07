@@ -21,7 +21,7 @@ jobs:
       - name: Deploy
         uses: crazy-max/ghaction-github-pages@v1
         with:
-          target_branch: auto-build-test
+          target_branch: pages
           build_dir: docs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
