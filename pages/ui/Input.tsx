@@ -151,8 +151,8 @@ const InputComponent: NextPageWithLayout = () => {
             leftIconColor={COLORS.blue}
             rightIconColor={COLORS.blue}
             placeholderTextColor={COLORS.blue}
-            w={300}
-            h={60}
+            w={250}
+            h={50}
           />
           <Input
             onChangeText={setUserName}
@@ -177,8 +177,8 @@ const InputComponent: NextPageWithLayout = () => {
             leftIconColor={COLORS.red}
             rightIconColor={COLORS.red}
             placeholderTextColor={COLORS.red}
-            w={120}
-            h={20}
+            w={150}
+            h={30}
           />
         </Div>
       </RenderItem>
