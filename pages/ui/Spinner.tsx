@@ -72,7 +72,7 @@ const SpinnerComponent: NextPageWithLayout = () => {
           <Spinner
             style={{ marginHorizontal: 10 }}
             color={COLORS.errorIcon}
-            size={70}
+            size={80}
           />
           <Spinner
             style={{ marginHorizontal: 10 }}

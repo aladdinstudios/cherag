@@ -101,7 +101,7 @@ const CheckboxComponent: NextPageWithLayout = () => {
         <Checkbox values={checkboxes} onChange={setCheckboxes}>
           <CheckboxItem
             iconSize={22}
-            checkedIconColor={COLORS.red}
+            checkedIconColor={COLORS.primary}
             textStyle={styles.checkboxText}
             value="1"
           >
@@ -109,7 +109,7 @@ const CheckboxComponent: NextPageWithLayout = () => {
           </CheckboxItem>
           <CheckboxItem
             iconSize={22}
-            checkedIconColor={COLORS.red}
+            checkedIconColor={COLORS.primary}
             textStyle={styles.checkboxText}
             value="2"
           >
@@ -117,7 +117,7 @@ const CheckboxComponent: NextPageWithLayout = () => {
           </CheckboxItem>
           <CheckboxItem
             iconSize={22}
-            checkedIconColor={COLORS.red}
+            checkedIconColor={COLORS.primary}
             textStyle={styles.checkboxText}
             value="3"
           >

@@ -1,4 +1,4 @@
-import { Button, COLORS } from "cherag-ui";
+import { Button, COLORS, Div } from "cherag-ui";
 import { ScrollView } from "react-native";
 import Layout from "../../components/Layout";
 import { RenderItem } from "../../components/RenderItem";
@@ -16,8 +16,7 @@ const ButtonComponent: NextPageWithLayout = () => {
   let __useCaseCodeStringArr: UsecaseArrayObjProps[] = [
     {
       name: "Example 1",
-      code: `
-    <Button
+      code: `   <Button
       w={"20%"}
       h={"10%"}
       bg={COLORS.primary}
@@ -32,8 +31,7 @@ const ButtonComponent: NextPageWithLayout = () => {
     },
     {
       name: "Example 2",
-      code: `
-    <Button
+      code: `   <Button
       w={"20%"}
       h={"10%"}
       borderRadius={5}
@@ -52,8 +50,7 @@ const ButtonComponent: NextPageWithLayout = () => {
     },
     {
       name: "Example 3",
-      code: `
-    <Button
+      code: `   <Button
       w={"10%"}
       h={"10%"}
       borderRadius={5}
@@ -144,27 +141,23 @@ const ButtonComponent: NextPageWithLayout = () => {
           h={"10%"}
           bg={COLORS.primary}
           color={COLORS.white}
-          borderRadius={10}
-          onPress={() => {
-            console.log("Button component test");
-          }}
+          onPress={() => console.log("test button component")}
         >
           Button component
         </Button>
         <Button
-          bg={COLORS.border}
+          bg={COLORS.blackish}
           color={COLORS.white}
           w={"20%"}
           h={"10%"}
           borderWidth={1}
+          fontSize={16}
           style={{
             justifyContent: "center",
-            borderColor: COLORS.lightPrimary,
+            borderColor: COLORS.errorIcon,
             marginVertical: 15,
           }}
-          onPress={() => {
-            console.log("Button component pressed");
-          }}
+          onPress={() => console.log("test button component")}
         >
           Button
         </Button>
@@ -175,7 +168,7 @@ const ButtonComponent: NextPageWithLayout = () => {
           fontSize={18}
           bg={COLORS.blue}
           color={COLORS.white}
-          onPress={() => console.log("Button component test")}
+          onPress={() => console.log("test button component")}
           style={{
             justifyContent: "center",
             borderColor: COLORS.lightPrimary,
@@ -185,13 +178,13 @@ const ButtonComponent: NextPageWithLayout = () => {
           Add product
         </Button>
         <Button
-          w={"10%"}
+          w={"20%"}
           h={"10%"}
           borderRadius={5}
-          fontSize={12}
+          fontSize={16}
           bg={COLORS.errorIcon}
           color={COLORS.white}
-          onPress={() => console.log("Button component test")}
+          onPress={() => console.log("test button component")}
         >
           Submit
         </Button>

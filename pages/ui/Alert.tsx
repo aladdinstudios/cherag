@@ -10,7 +10,10 @@ import {
 import { NextPageWithLayout } from "../_app";
 
 const AlertComponent: NextPageWithLayout = () => {
-  const [alert, setAlert] = useState(true);
+  const [firstAlert, setFirstAlert] = useState(true);
+  const [secondAlert, setSecondAlert] = useState(true);
+  const [thirdAlert, setthirdAlert] = useState(true);
+  const [fourthAlert, setFourthAlert] = useState(true);
 
   let __componentName = "Alert";
   let __componentDescription =
@@ -88,26 +91,26 @@ const AlertComponent: NextPageWithLayout = () => {
       >
         <Div style={{ justifyContent: "space-around", flex: 1 }}>
           <Alert
-            alert={alert}
-            setAlert={setAlert}
+            alert={firstAlert}
+            setAlert={setFirstAlert}
             status="warning"
             title="Product add successfully"
           />
           <Alert
-            alert={alert}
-            setAlert={setAlert}
+            alert={secondAlert}
+            setAlert={setSecondAlert}
             status="success"
             title="Product add successfully"
           />
           <Alert
-            alert={alert}
-            setAlert={setAlert}
+            alert={thirdAlert}
+            setAlert={setthirdAlert}
             status="error"
             title="Product add successfully"
           />
           <Alert
-            alert={alert}
-            setAlert={setAlert}
+            alert={fourthAlert}
+            setAlert={setFourthAlert}
             status="info"
             title="Product add successfully"
           />

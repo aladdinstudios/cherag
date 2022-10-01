@@ -86,10 +86,11 @@ const AvatarComponent: NextPageWithLayout = () => {
         <Div
           style={{
             flexDirection: "row",
+            justifyContent: "space-around",
           }}
         >
           <Avatar.Image
-            size={60}
+            size={90}
             dotSize={20}
             dotColor={COLORS.green}
             source={{
@@ -97,17 +98,17 @@ const AvatarComponent: NextPageWithLayout = () => {
             }}
           />
           <Avatar.Icon
-            style={{ paddingTop: 10 }}
+            style={{ marginHorizontal: 40, marginTop: 15 }}
             iconColor={COLORS.red}
-            bgColor={COLORS.lightGray}
-            iconSize={35}
+            bgColor={COLORS.lightGray5}
+            iconSize={90}
             icon="heart"
           />
           <Avatar.Text
-            style={{ paddingTop: 20 }}
             bgColor={COLORS.border}
             textColor={COLORS.white}
-            size={60}
+            textStyle={{ fontSize: 24, fontWeight: "bold" }}
+            size={90}
             label="XD"
           />
         </Div>
