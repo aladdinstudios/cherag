@@ -10,7 +10,11 @@ import {
 import { NextPageWithLayout } from "../_app";
 
 const SwitchComponent: NextPageWithLayout = () => {
-  const [isSwitchCheck, setIsSwitchCheck] = useState(false);
+  const [firstCheck, setFirstCheck] = useState(false);
+  const [secondCheck, setSecondCheck] = useState(false);
+  const [thirdCheck, setThirdCheck] = useState(false);
+  const [fourthCheck, setFourthCheck] = useState(false);
+  const [fifthCheck, setFifthCheck] = useState(false);
   let __componentName = "Switch";
   let __componentDescription =
     "Switch is a visual toggle between two components.";
@@ -96,40 +100,40 @@ const SwitchComponent: NextPageWithLayout = () => {
             size="sm"
             offTrackColor={COLORS.red}
             onTrackColor={COLORS.green}
-            isSwitchCheck={isSwitchCheck}
-            setIsSwitchCheck={setIsSwitchCheck}
+            isSwitchCheck={firstCheck}
+            setIsSwitchCheck={setFirstCheck}
             thumbColor={COLORS.lightGray7}
           />
           <Switch
             size="md"
             offTrackColor={COLORS.red}
             onTrackColor={COLORS.green}
-            isSwitchCheck={isSwitchCheck}
-            setIsSwitchCheck={setIsSwitchCheck}
+            isSwitchCheck={secondCheck}
+            setIsSwitchCheck={setSecondCheck}
             thumbColor={COLORS.lightGray7}
           />
           <Switch
             size="lg"
             offTrackColor={COLORS.red}
             onTrackColor={COLORS.green}
-            isSwitchCheck={isSwitchCheck}
-            setIsSwitchCheck={setIsSwitchCheck}
+            isSwitchCheck={thirdCheck}
+            setIsSwitchCheck={setThirdCheck}
             thumbColor={COLORS.lightGray7}
           />
           <Switch
             size="md"
             offTrackColor={COLORS.red}
             onTrackColor={COLORS.green}
-            isSwitchCheck={isSwitchCheck}
-            setIsSwitchCheck={setIsSwitchCheck}
+            isSwitchCheck={fourthCheck}
+            setIsSwitchCheck={setFourthCheck}
             thumbColor={COLORS.lightGray7}
           />
           <Switch
             size="sm"
             offTrackColor={COLORS.red}
             onTrackColor={COLORS.green}
-            isSwitchCheck={isSwitchCheck}
-            setIsSwitchCheck={setIsSwitchCheck}
+            isSwitchCheck={fifthCheck}
+            setIsSwitchCheck={setFifthCheck}
             thumbColor={COLORS.lightGray7}
           />
         </Div>
