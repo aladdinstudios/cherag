@@ -80,7 +80,7 @@ const TextComponent: NextPageWithLayout = () => {
             alignItems: "center",
           }}
         >
-          <Text style={{ color: COLORS.red }} fontSize="3xl">
+          <Text style={{ color: COLORS.red }} fontSize="4xl">
             Cherag-ui
           </Text>
           <Text style={{ color: COLORS.black }} fontSize="2xl">
